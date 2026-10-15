@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Leo y Aprendo">
+<meta name="theme-color" content="#FFF8EC">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Leo y Aprendo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF8EC;--card:#fff;--ink:#1f2a37;--muted:#5f6b7a;--line:#eadfcb;--accent:#2f6fd6;--accent2:#1d55ad;--ok:#1f9d55;--okbg:#e3f6ea;--ko:#d64545;--kobg:#fde8e8;--hl:#FFE27A;--turn:#c7f0d4;--c:#2f6fd6;
+--font:'Atkinson Hyperlegible',system-ui,-apple-system,'Segoe UI',sans-serif;--fs:24px;--lh:1.9}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font)}
+body{font-size:18px;-webkit-text-size-adjust:100%;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
+button,input,select,textarea{font-family:inherit;color:inherit}
+.vh{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+.wrap{max-width:920px;margin:0 auto;padding:16px 16px 60px}
+.center{text-align:center}
+h1{font-size:34px;margin:8px 0}h2{font-size:26px;margin:6px 0 12px}h3{font-size:21px;margin:4px 0 8px}
+.hint{color:var(--muted);font-size:16px;line-height:1.45}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:var(--bg);border-bottom:2px solid var(--line)}
+.top .inner{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:12px;width:100%}
+.avatar{font-size:38px;width:64px;height:64px;flex:0 0 64px;border-radius:50%;border:3px solid #fff;background:#ffe3a8;box-shadow:0 2px 0 var(--line);cursor:pointer;padding:0}
+.hello{flex:1;min-width:0}.hello b{font-size:22px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lvl{display:flex;align-items:center;gap:8px;font-size:15px;color:var(--muted);flex-wrap:wrap;margin-top:2px}
+.lvbar{flex:0 0 110px;height:10px;background:#efe3cc;border-radius:9px;overflow:hidden}.lvbar i{display:block;height:100%;background:linear-gradient(90deg,#f7b733,#fc6a1a)}
+.streak{font-size:20px;font-weight:700;background:#fff;border-radius:14px;padding:8px 12px;border:2px solid var(--line);white-space:nowrap}
+.ico{min-width:52px;height:52px;border-radius:14px;border:2px solid var(--line);background:#fff;font-size:21px;font-weight:700;cursor:pointer;padding:0 10px}
+.ttl{flex:1;font-weight:700;font-size:19px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tabs{display:flex;gap:10px;overflow-x:auto;padding:14px 16px 6px;max-width:920px;margin:0 auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;padding:10px 18px;border-radius:999px;border:3px solid var(--c);background:#fff;font-size:19px;font-weight:700;min-height:54px;cursor:pointer}
+.tab.on{background:var(--c);color:#fff}
+.tab.add{border-style:dashed;border-color:#b9ab8f;color:#7b6b4f}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:10px 20px;border-radius:16px;border:2px solid var(--line);background:#fff;font-size:19px;font-weight:700;box-shadow:0 3px 0 var(--line);cursor:pointer;text-decoration:none;color:var(--ink);text-align:center;line-height:1.2}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 3px 0 var(--accent2)}
+.btn.go{background:var(--ok);border-color:var(--ok);color:#fff;box-shadow:0 3px 0 #157341}
+.btn.warn{color:var(--ko)}
+.btn.big{min-height:66px;font-size:22px;width:100%}
+.btn.sm{min-height:44px;font-size:16px;padding:6px 14px;border-radius:12px}
+.btn[disabled]{opacity:.4;pointer-events:none}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.row>.btn{flex:1 1 200px}
+.between{justify-content:space-between}
+.card{background:var(--card);border:2px solid var(--line);border-radius:22px;padding:20px;margin:14px 0;box-shadow:0 3px 0 var(--line)}
+label.lb{display:block;font-weight:700;margin:16px 0 8px;font-size:18px}
+.inp{width:100%;font-size:20px;padding:14px 16px;border-radius:14px;border:2px solid var(--line);background:#fffdf8}
+textarea.inp{font-size:17px;line-height:1.5}
+.avs{display:flex;gap:10px;flex-wrap:wrap}
+.av{font-size:38px;width:66px;height:66px;border-radius:18px;border:3px solid var(--line);background:#fff;cursor:pointer;position:relative;padding:0}
+.av.on{border-color:var(--accent);background:#eaf2ff}
+.av.lock{filter:grayscale(1);opacity:.45}
+.av small{position:absolute;bottom:-2px;right:-2px;font-size:12px;background:#333;color:#fff;border-radius:8px;padding:1px 5px}
+.subhead{border-left:8px solid var(--c);padding-left:14px;margin:10px 0 6px}
+.tile{flex:1 1 220px;flex-direction:row;font-size:20px;min-height:70px}
+.temas{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-top:14px}
+.tema{background:#fff;border:2px solid var(--line);border-top:8px solid var(--c);border-radius:20px;padding:16px;box-shadow:0 3px 0 var(--line);display:flex;flex-direction:column;gap:12px}
+.tema h3{margin:0;font-size:21px;line-height:1.25}
+.tstats{display:flex;align-items:center;gap:14px;color:var(--muted);font-size:16px}
+.tstats .mini{flex:1}
+.mbar{height:12px;background:#f0e8d8;border-radius:9px;overflow:hidden;margin-top:5px}.mbar i{display:block;height:100%;background:var(--c)}
+.ring{width:66px;height:66px;flex:0 0 66px;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p) * 1%),#efe6d4 0);display:grid;place-items:center}
+.ring span{width:50px;height:50px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:700;font-size:15px;color:var(--ink)}
+.tema .row>.btn{flex:1 1 120px}
+.addtema{border:3px dashed #c9b994;border-radius:20px;background:transparent;font-size:21px;font-weight:700;color:#7b6b4f;min-height:150px;cursor:pointer}
+.addtema small{font-weight:400;font-size:16px}
+.empty{text-align:center;padding:40px 20px}.empty .big{font-size:80px}
+.badge{display:inline-block;background:#ffe9b0;border-radius:10px;padding:2px 10px;font-size:14px;font-weight:700;color:#7a5200}
+/* lectura */
+.steps{display:flex;gap:6px;margin:4px 0 10px}.steps i{flex:1;height:10px;border-radius:9px;background:#eadfca}.steps i.d{background:var(--ok)}.steps i.c{background:var(--accent)}
+.seg{display:flex;background:#fff;border:2px solid var(--line);border-radius:16px;padding:4px;gap:4px;margin:10px 0}
+.seg button{flex:1;min-height:52px;border:none;border-radius:12px;background:transparent;font-size:17px;font-weight:700;cursor:pointer;padding:4px 6px}
+.seg button.on{background:var(--accent);color:#fff}
+.seg.sm button{min-height:44px;font-size:16px}
+.seg.sm button.on{background:#ffcf5c;color:#3b2a00}
+.text{font-size:var(--fs);line-height:var(--lh);letter-spacing:.03em;word-spacing:.14em;border-top:8px solid var(--c)}
+.text p{margin:0 0 .7em;max-width:62ch}
+.text p.bl{padding-left:1.1em;text-indent:-1.1em}
+.ftitle{font-size:calc(var(--fs) + 2px);line-height:1.3;margin:0 0 14px}
+.ftitle small{display:block;font-size:15px;color:var(--muted);font-weight:400;letter-spacing:0}
+.s{border-radius:8px;padding:1px 2px;transition:background .25s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.s.mine{background:linear-gradient(transparent 82%,#bfe8cc 82%)}
+.s.cur{background:var(--hl)}
+.s.cur.mine{background:var(--turn);outline:3px solid #27a35a}
+.w{cursor:pointer;border-radius:5px}
+.w.g{border-bottom:3px dotted var(--c);font-weight:700}
+.w:active{background:#dbe8ff}
+.ctl{display:flex;gap:12px;flex-wrap:wrap;margin:10px 0}.ctl .btn{flex:1 1 200px}
+.turn{background:var(--turn);border:3px solid #27a35a;border-radius:18px;padding:14px;font-size:21px;font-weight:700;text-align:center;margin:10px 0;animation:pulse 1.8s infinite}
+.listen{background:#fff6d6;border:2px solid #f0d36b;border-radius:16px;padding:12px;font-size:18px;text-align:center;margin:10px 0}
+.donebox{background:var(--okbg);border:3px solid var(--ok);border-radius:18px;padding:16px;text-align:center;font-size:22px;font-weight:700;margin:10px 0}
+.navrow{display:flex;justify-content:space-between;gap:10px;margin-top:16px}
+.navrow .btn{flex:0 1 auto}
+/* preguntas */
+.qtag{display:inline-block;background:#eef3ff;color:var(--accent2);font-weight:700;border-radius:10px;padding:4px 12px;font-size:16px;margin-bottom:8px}
+.qtag.retry{background:#fff1d6;color:#8a5a00}
+.qtext{font-size:calc(var(--fs) + 1px);line-height:1.5;font-weight:700;margin:6px 0 10px;letter-spacing:.02em}
+.gap{display:inline-block;min-width:4.5em;border-bottom:4px solid var(--accent);text-align:center;color:var(--accent);text-indent:0}
+.opt{display:flex;align-items:center;gap:14px;width:100%;min-height:72px;padding:12px 16px;margin:10px 0;border-radius:18px;border:3px solid var(--line);background:#fff;font-size:calc(var(--fs) - 2px);text-align:left;font-weight:600;line-height:1.35;cursor:pointer;letter-spacing:.02em}
+.opt b{flex:0 0 46px;height:46px;border-radius:12px;background:#f3ecdc;display:grid;place-items:center;font-size:21px}
+.opt.sel{border-color:var(--accent);background:#eaf2ff}.opt.sel b{background:var(--accent);color:#fff}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}.opt.ok b{background:var(--ok);color:#fff}
+.opt.ko{border-color:var(--ko);background:var(--kobg)}.opt.ko b{background:var(--ko);color:#fff}
+.opt.dim{opacity:.5}
+.opt[disabled]{cursor:default}
+.fb{border-radius:18px;padding:14px 16px;font-size:20px;margin:10px 0;line-height:1.45}
+.fb.ok{background:var(--okbg);border:3px solid var(--ok)}.fb.ko{background:#fff4e5;border:3px solid #f0a020}
+.fb b{font-size:23px}
+.qbar{display:flex;align-items:center;gap:10px}.qbar .mbar{flex:1;height:14px}.qbar .mbar i{background:linear-gradient(90deg,#46c37b,#1f9d55)}
+.qcount{font-weight:700;font-size:18px;white-space:nowrap}
+/* resultados / pausa */
+.bigemo{font-size:110px;line-height:1.1;margin-top:10px}
+.score{font-size:30px;font-weight:700}
+.nota{display:inline-block;font-size:44px;font-weight:700;background:#fff;border:4px solid var(--c);border-radius:22px;padding:6px 24px;margin:8px}
+.rev{border-left:6px solid var(--ok);padding:8px 12px;margin:8px 0;background:#fff;border-radius:10px;font-size:17px;line-height:1.45}
+.rev.ko{border-left-color:var(--ko)}
+.count{width:170px;height:170px;border-radius:50%;margin:16px auto;background:conic-gradient(var(--ok) calc(var(--p) * 1%),#e9dfcb 0);display:grid;place-items:center}
+.count span{width:136px;height:136px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:48px;font-weight:700}
+.bounce{animation:bounce 1.2s infinite}
+/* modal */
+.ov{position:fixed;inset:0;background:rgba(25,25,35,.45);display:flex;align-items:center;justify-content:center;z-index:100;padding:16px}
+.mbox{background:#fff;border-radius:22px;max-width:660px;width:100%;max-height:88vh;overflow:auto;padding:22px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.mbox h2{margin-top:0}
+.wordbig{font-size:46px;font-weight:700;text-align:center;margin:6px 0}
+.pinpad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:300px;margin:12px auto}
+.pinpad button{height:64px;font-size:26px;font-weight:700;border-radius:16px;border:2px solid var(--line);background:#fff;cursor:pointer}
+.pindots{display:flex;justify-content:center;gap:14px;margin:10px}.pindots i{width:20px;height:20px;border-radius:50%;border:3px solid var(--accent)}.pindots i.f{background:var(--accent)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#22303f;color:#fff;padding:14px 22px;border-radius:16px;font-size:18px;font-weight:700;z-index:200;max-width:90vw;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.25);animation:pop .25s}
+.files{display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.file{display:flex;align-items:center;gap:10px;background:#fbf6ea;border-radius:12px;padding:8px 12px;font-size:16px}
+.file span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pick{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.prog{list-style:none;padding:0;margin:10px 0}.prog li{padding:10px 12px;border-radius:12px;margin:6px 0;background:#fff;border:2px solid var(--line);font-size:17px}
+.prog li.run{border-color:var(--accent)}.prog li.ok{border-color:var(--ok)}.prog li.err{border-color:var(--ko);background:var(--kobg)}
+.spin{display:inline-block;width:18px;height:18px;border:3px solid #c9d7f2;border-top-color:var(--accent);border-radius:50%;animation:rot .8s linear infinite;vertical-align:-3px}
+/* adultos */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.kpi{background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px;text-align:center}
+.kpi b{display:block;font-size:30px}.kpi span{color:var(--muted);font-size:15px}
+.tbl{width:100%;border-collapse:collapse;font-size:16px}.tbl td,.tbl th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.trow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
+.trow .tt{flex:1 1 220px;font-weight:700}
+.set{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.set>div:first-child{flex:1 1 240px}
+.set select,.set input[type=text],.set input[type=password],.set input[type=tel]{font-size:17px;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:#fffdf8;min-width:200px}
+.set input[type=range]{width:220px}
+.sw{width:58px;height:34px;-webkit-appearance:none;appearance:none;background:#d9cfbd;border-radius:20px;position:relative;cursor:pointer;transition:.2s;margin:0}
+.sw:checked{background:var(--ok)}.sw::after{content:'';position:absolute;top:3px;left:3px;width:28px;height:28px;border-radius:50%;background:#fff;transition:.2s}.sw:checked::after{left:27px}
+.qlist .q{padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
+.qlist .q div{flex:1;font-size:16px;line-height:1.4}
+.qtag.dev{background:#f3e8ff;color:#6b21a8}
+.devta{font-size:calc(var(--fs) - 2px);line-height:1.6;min-height:220px;margin-top:6px}
+.model{background:#f4f8ff;border-left:5px solid var(--accent);padding:10px 14px;border-radius:10px;line-height:1.6;font-size:18px;white-space:pre-wrap}
+.fbl{margin:4px 0 10px;padding-left:22px;line-height:1.5;font-size:18px}.fbl li{margin:5px 0}
+.tipbox{background:#fff7e0;border-radius:12px;padding:10px 14px;font-size:18px;line-height:1.45}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px;border:2px solid var(--line);border-radius:12px;margin:8px 0;font-size:18px;background:#fff;line-height:1.4;cursor:pointer}.chk input{width:26px;height:26px;flex:0 0 26px;margin:0}
+.why{margin-top:8px;line-height:1.45}
+.nota.sm{font-size:32px;padding:2px 16px;float:right;margin:0 0 6px 10px}
+.pbar{position:relative;height:30px;background:#efe6d4;border-radius:15px;overflow:hidden;margin:10px 0}.pbar i{display:block;height:100%;border-radius:15px}.pbar span{position:absolute;right:12px;top:3px;font-weight:700;font-size:18px}
+.verd{font-size:30px;font-weight:700;margin:6px 0}
+.btn small{font-weight:400;font-size:15px;opacity:.9}
+.warnline{color:#b45309;font-weight:700;margin-top:6px}
+details summary{cursor:pointer;font-size:19px;margin:10px 0 6px}
+.mbar3{display:flex;gap:2px;height:34px;border-radius:10px;overflow:hidden;margin:8px 0}.mbar3 i{display:flex;align-items:center;justify-content:center;color:#fff;font-style:normal;font-weight:700;font-size:15px;min-width:4px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px;color:var(--muted);margin-top:4px}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.wk{display:flex;gap:8px;align-items:flex-end;min-height:170px;padding-top:6px;overflow-x:auto}.wcol{flex:1 0 54px;display:flex;flex-direction:column;align-items:center;gap:4px}
+.wbar{width:34px;display:flex;flex-direction:column;gap:2px;border-radius:4px 4px 0 0;overflow:hidden}.wbar i{display:block;min-height:2px}.wtop{font-size:13px;font-weight:700;color:var(--ink)}.wlab{font-size:12px;color:var(--muted);white-space:nowrap}
+.cal{display:grid;grid-template-columns:repeat(14,1fr);gap:4px;max-width:520px;margin:8px 0}.cal i{aspect-ratio:1;border-radius:4px;display:block}
+.day{border-top:1px solid var(--line);padding:8px 0}.dayh{display:flex;justify-content:space-between;margin-bottom:4px}.dayh span{color:var(--muted);font-weight:700}
+.act{display:flex;gap:10px;padding:6px 0;font-size:16px;line-height:1.4}.act>span{font-size:20px;flex:0 0 26px}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:150}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(39,163,90,.35)}50%{box-shadow:0 0 0 10px rgba(39,163,90,0)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pop{from{transform:translateX(-50%) scale(.9);opacity:0}to{transform:translateX(-50%) scale(1);opacity:1}}
+@keyframes rot{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:560px){.lvbar{flex-basis:70px}.hello b{font-size:19px}.avatar{width:54px;height:54px;flex-basis:54px;font-size:32px}.streak{font-size:17px;padding:6px 8px}}
+@media print{.noprint{display:none!important}body{background:#fff}.card{box-shadow:none;break-inside:avoid}.top{position:static}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+'use strict';
+/* ================== utilidades ================== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9)+Date.now().toString(36).slice(-4);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const escRe=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const DAY=86400000;
+const dstr=d=>{d=new Date(d);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const fdate=d=>new Date(d).toLocaleDateString('es-ES',{day:'numeric',month:'short'})+' '+new Date(d).toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'});
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const LETTER='[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]';
+const toArr=a=>Array.isArray(a)?a.map(x=>String(x==null?'':x).trim()).filter(Boolean):[];
+const fmtN=n=>(Math.round(n*10)/10).toFixed(1).replace('.',',');
+const wordsOf=s=>String(s).match(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/g)||[];
+
+const COLORS=['#2f6fd6','#e8590c','#2b9348','#9c36b5','#d6336c','#0c8599','#d99100','#5f3dc4','#c92a2a','#495057'];
+const SUBJ_EMOJI=['📘','🔬','🌍','🧮','🗣️','🇬🇧','🇫🇷','🏛️','🌱','🎨','🎵','⚽','💻','✝️','📖','🧪'];
+const AVATARS=[['🎧',1],['⚡',1],['🏀',1],['⚽',1],['🎮',1],['🦊',1],['🎸',2],['🛹',3],['🐺',4],['🚀',5],['🦅',6],['🐉',7],['🤖',8],['🧠',9],['👑',10]];
+const LEVELS=['Novato','Aprendiz','Constante','Avanzado','Experto','Pro','Élite','Maestro','Leyenda'];
+const STARS_LV=40;
+const BADGES={primer:['🎉','Primer test'],perfecto:['💯','Test perfecto'],racha3:['🔥','3 días seguidos'],racha7:['🌋','7 días seguidos'],est50:['⭐','50 estrellas'],est200:['🌟','200 estrellas'],lector:['📚','Tema leído entero'],dominado:['🏆','Tema dominado'],examen:['🎓','Examen aprobado']};
+const PRAISE=['¡Correcto!','¡Bien visto!','¡Eso es!','¡Perfecto!','¡Clavada!','¡Muy bien!'];
+const OOPS=['Casi','No pasa nada, se aprende fallando','Esta no'];
+const BREAKS=[['🙆','Levántate y estira los brazos hacia el techo 15 segundos'],['💧','Ve a por un vaso de agua'],['🦵','Haz 10 sentadillas'],['🔄','Gira los hombros hacia atrás 10 veces y el cuello despacio a cada lado'],['🫁','Respiración 4-4-4: coge aire en 4, aguanta 4, suéltalo en 4. Cinco veces'],['🚶','Da una vuelta por la casa sin mirar el móvil'],['👀','Mira por la ventana a lo lejos 20 segundos para descansar la vista'],['💪','Haz 10 flexiones apoyado en la pared']];
+const MODE_L={escucho:'🔊 Me lo lees',turnos:'🔁 Por turnos',yo:'👀 Leo yo'};
+const FONTS={atkinson:"'Atkinson Hyperlegible',system-ui,sans-serif",lexend:"'Lexend',system-ui,sans-serif",sistema:"system-ui,-apple-system,'Segoe UI',sans-serif"};
+const BGS={crema:'#FFF8EC',blanco:'#FFFFFF',azul:'#EEF4FF',verde:'#EEF8EF'};
+const STOP=new Set(('el la los las un una unos unas de del al a ante bajo con contra desde en entre hacia hasta para por segun sin sobre tras y e ni o u pero mas sino que porque como cuando donde quien cual cuales cuyo esto esta este estos estas ese esa esos esas aquel aquella sus su mis mi tus tu nuestro nuestra lo le les se nos me te ya muy tambien tan tanto otra otro otras otros todo toda todos todas cada mismo misma puede pueden tiene tienen hay son es fue ser estar estan era eran sido hace hacen hacer parte forma tipo tipos algunos algunas mucho mucha muchos muchas poco pocos ademas siempre nunca gran grande grandes llamado llamada llaman tambien despues antes durante mediante aunque mientras ellos ellas nosotros usted cosas manera ejemplo segunda primera primero tienen tenia podemos podria pueden decir llamados llamadas primeros primeras demas veces suele suelen').split(' '));
+
+/* ================== estado y guardado ================== */
+function defState(){return{v:1,setup:false,profile:{name:'',avatar:'🦊'},
+ settings:{pin:'',apiKey:'',model:'gemini-2.5-flash',font:'atkinson',fs:21,lh:1.8,bg:'crema',rate:0.9,voiceURI:'',sessionLen:8,breakMin:15,autoRead:true,sound:true,twoStep:true,hints:true,readMode:'turnos'},
+ subjects:[],qstats:{},devstats:{},history:[],rlog:{},trash:[],lastBackup:0,lastSnap:'',stars:0,streak:{last:'',n:0},badges:[],readStars:{},activeSubject:null}}
+let S=defState();
+const DB={db:null,
+ async open(){try{this.db=await new Promise((res,rej)=>{const r=indexedDB.open('leoyaprendo',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})}catch(e){this.db=null}},
+ get(k){if(!this.db){try{return Promise.resolve(JSON.parse(localStorage.getItem('lya_'+k)))}catch(e){return Promise.resolve(null)}}
+  return new Promise(res=>{try{const r=this.db.transaction('kv','readonly').objectStore('kv').get(k);r.onsuccess=()=>res(r.result||null);r.onerror=()=>res(null)}catch(e){res(null)}})},
+ set(k,v){if(!this.db){try{localStorage.setItem('lya_'+k,JSON.stringify(v))}catch(e){toast('⚠️ No queda espacio para guardar')}return Promise.resolve()}
+  return new Promise(res=>{try{const tx=this.db.transaction('kv','readwrite');tx.objectStore('kv').put(v,k);tx.oncomplete=()=>res();tx.onerror=()=>res()}catch(e){res()}})}};
+DB.keys=function(){if(!this.db)return Promise.resolve(Object.keys(localStorage).filter(k=>k.startsWith('lya_')).map(k=>k.slice(4)));
+ return new Promise(res=>{try{const r=this.db.transaction('kv','readonly').objectStore('kv').getAllKeys();r.onsuccess=()=>res(r.result||[]);r.onerror=()=>res([])}catch(e){res([])}})};
+DB.del=function(k){if(!this.db){localStorage.removeItem('lya_'+k);return Promise.resolve()}
+ return new Promise(res=>{try{const tx=this.db.transaction('kv','readwrite');tx.objectStore('kv').delete(k);tx.oncomplete=()=>res();tx.onerror=()=>res()}catch(e){res()}})};
+async function snapshot(reason){if(!S.setup)return;try{await DB.set('snap_'+new Date().toISOString().replace(/[:.]/g,'-'),{d:Date.now(),reason,state:JSON.parse(JSON.stringify(S))});
+ const ks=(await DB.keys()).filter(x=>String(x).startsWith('snap_')).sort();while(ks.length>14)await DB.del(ks.shift())}catch(e){}}
+let saveT;
+function save(now){clearTimeout(saveT);const f=()=>DB.set('state',JSON.parse(JSON.stringify(S)));if(now)return f();saveT=setTimeout(f,350)}
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){save(true);TTS.stop()}});
+window.addEventListener('pagehide',()=>save(true));
+
+/* ================== voz ================== */
+const TTS={ok:'speechSynthesis' in window,voices:[],voice:null,tok:0,
+ load(){if(!this.ok)return;const p=()=>{this.voices=speechSynthesis.getVoices().filter(v=>/^es/i.test(v.lang));const pref=S.settings.voiceURI;
+  this.voice=this.voices.find(v=>v.voiceURI===pref)||this.voices.find(v=>/es[-_]ES/i.test(v.lang)&&/(m[oó]nica|marisol|jorge|paulina|elvira|alvaro)/i.test(v.name))||this.voices.find(v=>/es[-_]ES/i.test(v.lang))||this.voices[0]||null};
+  p();speechSynthesis.onvoiceschanged=p},
+ clean(t){return String(t).replace(/_{2,}/g,' ... ').replace(/[•●▪■]/g,'').replace(/\p{Extended_Pictographic}/gu,'').replace(/\s+/g,' ').trim()},
+ speak(t,rate){return new Promise(res=>{if(!this.ok){res();return}const tx=this.clean(t);if(!tx){res();return}
+  const u=new SpeechSynthesisUtterance(tx);u.lang=this.voice?this.voice.lang:'es-ES';if(this.voice)u.voice=this.voice;u.rate=rate||S.settings.rate;
+  let done=false,tm=null;const fin=()=>{if(!done){done=true;clearTimeout(tm);res()}};u.onend=fin;u.onerror=fin;
+  tm=setTimeout(fin,2500+tx.length*140/u.rate);speechSynthesis.speak(u)})},
+ async seq(arr,rate){const my=++this.tok;for(const t of arr){if(my!==this.tok)return false;await this.speak(t,rate)}return my===this.tok},
+ say(t,rate){this.stop();return this.seq([t],rate)},
+ stop(){this.tok++;if(this.ok){try{speechSynthesis.cancel()}catch(e){}}}};
+
+/* ================== sonido, confeti, toast ================== */
+let AC;
+function beep(ok){if(!S.settings.sound)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const t0=AC.currentTime;const notes=ok?[523,659,784]:[330,262];
+ notes.forEach((f,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.type='sine';o.frequency.value=f;const t=t0+i*0.12;g.gain.setValueAtTime(0.0001,t);g.gain.exponentialRampToValueAtTime(0.16,t+0.02);g.gain.exponentialRampToValueAtTime(0.0001,t+0.28);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+0.3)})}catch(e){}}
+function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;const c=document.createElement('canvas');c.id='confetti';document.body.appendChild(c);const x=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;
+ const P=Array.from({length:120},()=>({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.5,vx:(Math.random()-0.5)*4,vy:2+Math.random()*4,r:5+Math.random()*6,a:Math.random()*6,col:pick(['#f7b733','#2f6fd6','#1f9d55','#d6336c','#9c36b5','#fc6a1a'])}));
+ let n=0;(function f(){x.clearRect(0,0,c.width,c.height);P.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.a+=0.15;x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.col;x.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);x.restore()});if(++n<150)requestAnimationFrame(f);else c.remove()})()}
+let toastT;
+function toast(m,ms){const old=$('.toast');if(old)old.remove();const d=document.createElement('div');d.className='toast';d.textContent=m;document.body.appendChild(d);clearTimeout(toastT);toastT=setTimeout(()=>d.remove(),ms||2600)}
+
+/* ================== modales ================== */
+let MCB={};
+function modal(html,cls){closeModal();const o=document.createElement('div');o.className='ov noprint';o.id='modal';o.innerHTML=`<div class="mbox ${cls||''}">${html}</div>`;
+ o.addEventListener('click',e=>{if(e.target===o)closeModal()});document.body.appendChild(o);return o}
+function closeModal(){const m=$('#modal');if(m)m.remove()}
+function confirmBox(txt,ok,cb){MCB.ok=cb;modal(`<h2>¿Seguro?</h2><p style="font-size:19px;line-height:1.5">${txt}</p><div class="row"><button class="btn" data-act="mclose">Cancelar</button><button class="btn pri" data-act="mok">${ok}</button></div>`)}
+function promptBox(title,val,cb,ph){MCB.ok=v=>cb(v.mp||'');modal(`<h2>${title}</h2><input id="mp" class="inp" value="${esc(val||'')}" placeholder="${esc(ph||'')}"><div class="row" style="margin-top:16px"><button class="btn" data-act="mclose">Cancelar</button><button class="btn pri" data-act="mok">Guardar</button></div>`);setTimeout(()=>{const i=$('#mp');if(i){i.focus();i.select()}},50)}
+let PIN={buf:'',cb:null};
+function askPin(cb){if(!S.settings.pin){cb();return}PIN={buf:'',cb};modal(`<h2 class="center">🔒 Zona de adultos</h2><p class="center hint">Escribe el código de 4 números</p><div class="pindots" id="pd">${'<i></i>'.repeat(4)}</div><div class="pinpad">${[1,2,3,4,5,6,7,8,9,'⌫',0,'✖'].map(d=>`<button data-act="pin" data-d="${d}">${d}</button>`).join('')}</div>`)}
+
+/* ================== tema / tipografía ================== */
+function applyTheme(){const r=document.documentElement.style,s=S.settings;r.setProperty('--fs',s.fs+'px');r.setProperty('--lh',s.lh);r.setProperty('--font',FONTS[s.font]||FONTS.atkinson);r.setProperty('--bg',BGS[s.bg]||BGS.crema);
+ const m=document.querySelector('meta[name=theme-color]');if(m)m.content=BGS[s.bg]||BGS.crema}
+
+/* ================== helpers de datos ================== */
+const subj=id=>S.subjects.find(s=>s.id===id);
+function getST(sid,tid){const s=subj(sid);return{s,t:s?s.temas.find(t=>t.id===tid):null}}
+function findQ(t,qid){return t.questions.find(q=>q.id===qid)}
+const st=qid=>S.qstats[qid];
+function mastery(t){if(!t.questions.length)return 0;return Math.round(100*t.questions.filter(q=>st(q.id)&&st(q.id).box>=3).length/t.questions.length)}
+function qScore(q){const x=st(q.id);if(!x)return 0;return x.box>=3?1:x.box===2?0.6:x.box===1?0.3:0}
+function devAvg(t){const dv=t.dev||[];if(!dv.length)return null;return dv.reduce((a,x)=>a+((S.devstats[x.id]||{}).last||0),0)/dv.length}
+function temaPrep(t){const n=t.questions.length;if(!n)return 0;let q=t.questions.reduce((a,x)=>a+qScore(x),0)/n;const d=devAvg(t);if(d!=null)q=0.7*q+0.3*d/10;return Math.round(100*q)}
+function subjPrep(s){const ts=s.temas.filter(t=>t.questions.length);if(!ts.length)return 0;return Math.round(ts.reduce((a,t)=>a+temaPrep(t),0)/ts.length)}
+function prepState(p){return p>=80?['#1f9d55','Preparado para el examen']:p>=60?['#c98a00','Aprobaría, pero justo']:p>=30?['#e8590c','Aún no: hay que repasar']:['#d64545','Empezando']}
+function daysTo(ds){if(!ds)return null;const t=new Date(ds+'T00:00:00');const n=new Date();n.setHours(0,0,0,0);return Math.round((t-n)/DAY)}
+function lastSim(s){const h=S.history.filter(x=>x.sid===s.id&&x.mode==='exam'&&x.nota!=null);return h.length?h[h.length-1].nota:null}
+function fallosOf(s){const out=[];s.temas.forEach(t=>t.questions.forEach(q=>{const x=st(q.id);if(x&&x.fail>0&&x.box<3)out.push({temaId:t.id,qid:q.id})}));return out}
+function level(){return 1+Math.floor(S.stars/STARS_LV)}
+function addStars(n){if(!n)return;const lv=level();S.stars+=n;if(level()>lv){setTimeout(()=>{toast(`🎊 ¡Subes al nivel ${level()}: ${LEVELS[Math.min(level()-1,LEVELS.length-1)]}!`,3500);confetti()},600)}
+ if(S.stars>=50)award('est50');if(S.stars>=200)award('est200')}
+function award(k){if(!S.badges.includes(k)){S.badges.push(k);setTimeout(()=>toast(`${BADGES[k][0]} ¡Nueva medalla: ${BADGES[k][1]}!`,3500),1200)}}
+function recordQ(qid,ok,hint){const x=S.qstats[qid]||(S.qstats[qid]={seen:0,ok:0,fail:0,box:0,next:0,last:0});x.seen++;x.last=Date.now();
+ if(ok&&hint){x.ok++;x.next=Date.now();return}
+ if(ok){x.ok++;x.box=Math.min(5,x.box+1)}else{x.fail++;x.box=0}x.next=Date.now()+[0,1,2,4,7,14][x.box]*DAY}
+function touchStreak(){const t=dstr(Date.now()),y=dstr(Date.now()-DAY);if(S.streak.last===t)return;S.streak.n=S.streak.last===y?S.streak.n+1:1;S.streak.last=t;
+ if(S.streak.n>=3)award('racha3');if(S.streak.n>=7)award('racha7')}
+function streakNow(){const t=dstr(Date.now()),y=dstr(Date.now()-DAY);return(S.streak.last===t||S.streak.last===y)?S.streak.n:0}
+
+/* ================== texto: limpieza, frases, fragmentos ================== */
+function cleanText(t){t=String(t).replace(/\r/g,'').replace(/[ \t ]+/g,' ');const out=[];
+ for(let ln of t.split('\n')){ln=ln.trim();
+  if(!ln){if(out.length&&out[out.length-1]!=='')out.push('');continue}
+  if(/^(p[aá]g(ina)?\.?\s*)?\d{1,3}$/i.test(ln))continue;
+  ln=ln.replace(/^[•●▪■◦‣*·–—-]\s*/,'• ').replace(/^• •\s*/,'• ');
+  let pi=out.length-1;while(pi>=0&&out[pi]==='')pi--;
+  const prev=pi>=0?out[pi]:'';const blankBetween=pi!==out.length-1;
+  if(prev&&!ln.startsWith('• ')&&!blankBetween){
+   if(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]-$/.test(prev)&&/^[a-záéíóúüñ]/.test(ln)){out[pi]=prev.slice(0,-1)+ln;continue}
+   if(!/[.:!?;»”")]$/.test(prev)&&/^[a-záéíóúüñ(,;]/.test(ln)){out[pi]=prev+' '+ln;continue}}
+  out.push(ln)}
+ return out.join('\n').replace(/\n{3,}/g,'\n\n').trim()}
+function splitSentences(line){const res=[];String(line).split('\n').forEach(l=>{l=l.trim();if(!l)return;
+ const m=l.match(/[^.!?…]+(?:[.!?…]+["»”)\]]*|$)/g)||[l];const parts=[];
+ m.forEach(p=>{p=p.trim();if(!p)return;const L=parts.length-1;if(L>=0&&/^\d/.test(p)&&/\d[.,]$/.test(parts[L]))parts[L]+=p;else if(L>=0&&(p.length<14||/^[a-záéíóúñ]/.test(p)))parts[L]+=' '+p;else parts.push(p)});
+ res.push(...parts)});return res}
+function isHeading(ln,next){return ln.length<75&&!/[.,;:]$/.test(ln)&&!ln.startsWith('• ')&&ln.split(/\s+/).length<=10&&!!next&&/^[A-ZÁÉÍÓÚÑ0-9¿¡]/.test(ln)}
+function fragmentText(text){const lines=text.split('\n').map(s=>s.trim());const frags=[];let cur={titulo:'',parts:[]},len=0;
+ const push=()=>{if(cur.parts.length)frags.push({titulo:cur.titulo,original:cur.parts.join('\n')});cur={titulo:'',parts:[]};len=0};
+ for(let i=0;i<lines.length;i++){const ln=lines[i];if(!ln)continue;let j=i+1;while(j<lines.length&&!lines[j])j++;const next=lines[j]||'';
+  if(isHeading(ln,next)&&!isHeading(next,'x')||isHeading(ln,next)&&!cur.parts.length){
+   if(cur.parts.length)push();cur.titulo=cur.titulo?cur.titulo+' · '+ln:ln;continue}
+  let paras=[ln];
+  if(ln.length>650){paras=[];let acc='';splitSentences(ln).forEach(s=>{if(acc&&acc.length+s.length>520){paras.push(acc);acc=s}else acc=acc?acc+' '+s:s});if(acc)paras.push(acc)}
+  for(const p of paras){if(len>0&&len+p.length>900)push();cur.parts.push(p);len+=p.length;if(len>=600&&!p.startsWith('• '))push()}}
+ push();
+ const out=[];frags.forEach(f=>{const last=out[out.length-1];if(last&&f.original.length<110&&last.original.length<650){last.original+='\n'+(f.titulo?f.titulo+'\n':'')+f.original}else out.push(f)});
+ out.forEach(f=>{if(!f.titulo){const w=wordsOf(f.original).slice(0,5).join(' ');f.titulo=w+'…'}});
+ return out}
+
+/* ================== generador sin IA ================== */
+function offlineGen(frags){const all=frags.map(f=>f.original).join(' ');const freq={};
+ wordsOf(all).forEach(w=>{const n=norm(w);if(n.length<5||STOP.has(n))return;freq[w]=(freq[w]||0)+1});
+ const pool=Object.keys(freq);const nums=[...new Set(all.match(/\b\d{1,4}\b/g)||[])];
+ function distract(ans,avoid){
+  if(/^\d+$/.test(ans)){const n=+ans;let ds=shuffle(nums.filter(x=>x!==ans)).slice(0,2);let k=0;
+   while(ds.length<2&&k<30){k++;const step=n>100?10*(1+Math.floor(Math.random()*6)):1+Math.floor(Math.random()*4);const d=String(Math.random()<0.5?n+step:Math.max(0,n-step));if(d!==ans&&!ds.includes(d))ds.push(d)}return ds}
+  const isCap=/^[A-ZÁÉÍÓÚÑ]/.test(ans),na=norm(ans),L=ans.length;
+  const c=pool.filter(w=>{const nw=norm(w);return nw!==na&&/^[A-ZÁÉÍÓÚÑ]/.test(w)===isCap&&Math.abs(w.length-L)<=4&&!avoid.has(nw)&&nw.slice(0,4)!==na.slice(0,4)});
+  const end=na.slice(-2);const same=shuffle(c.filter(w=>norm(w).endsWith(end)));const seen=new Set();const ds=[];
+  for(const w of same.concat(shuffle(c))){const k=norm(w).slice(0,5);if(seen.has(k))continue;seen.add(k);ds.push(w);if(ds.length===2)break}
+  return ds.length===2?ds:null}
+ const qs=[];
+ frags.forEach((f,fi)=>{const sents=splitSentences(f.original).map(s=>s.replace(/^•\s*/,'')).filter(s=>{const n=wordsOf(s).length;return n>=6&&n<=34});let made=0;
+  for(const s of shuffle(sents)){if(made>=3)break;const ws=wordsOf(s);const avoid=new Set(ws.map(norm));
+   const cands=ws.map((w,i)=>{const n=norm(w);let sc=-1;if(/^\d{1,4}$/.test(w))sc=4;else if(i>0&&/^[A-ZÁÉÍÓÚÑ]/.test(w)&&n.length>=4&&!STOP.has(n))sc=3+Math.min(freq[w]||1,3)/3;else if(n.length>=6&&!STOP.has(n))sc=1+Math.min(freq[w]||1,3)/2+w.length/12;return{w,sc}}).filter(x=>x.sc>0).sort((a,b)=>b.sc-a.sc);
+   let done=false;for(const {w:ans} of cands.slice(0,3)){const ds=distract(ans,avoid);if(!ds)continue;
+    const re=new RegExp('(^|[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9])'+escRe(ans)+'(?![A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9])');if(!re.test(s))continue;
+    if(made%2===0)qs.push({id:uid(),tipo:'hueco',enunciado:s.replace(re,'$1_____'),opciones:[ans,...ds],correcta:0,explicacion:'En el tema la frase completa es: «'+s+'»',porque:['',...ds.map(d=>'«'+d+'» no es lo que dice el tema en esta frase; aquí se habla de «'+ans+'».')],frag:fi});
+    else{const fake=Math.random()<0.5;qs.push({id:uid(),tipo:'vf',enunciado:fake?s.replace(re,'$1'+ds[0]):s,opciones:['Verdadero','Falso'],correcta:fake?1:0,explicacion:fake?'Es falsa: en el tema pone «'+ans+'», no «'+ds[0]+'».':'Es verdadera: el tema lo dice así.',porque:fake?['Has dado por buena una frase con un dato cambiado: el tema dice «'+ans+'», no «'+ds[0]+'». Lee despacio cada palabra clave.','']:['','La frase es exactamente lo que dice el tema; ningún dato está cambiado.'],frag:fi})}
+    made++;done=true;break}
+   if(!done)continue}});
+ return qs}
+
+/* ================== PDF e imágenes ================== */
+async function loadPdfJs(){if(window.pdfjsLib)return;await new Promise((res,rej)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';s.onload=res;s.onerror=()=>rej(new Error('No se pudo cargar el lector de PDF. Comprueba que hay internet.'));document.head.appendChild(s)});
+ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'}
+async function pdfText(file){await loadPdfJs();const pdf=await pdfjsLib.getDocument({data:await file.arrayBuffer()}).promise;const lines=[];
+ for(let p=1;p<=pdf.numPages;p++){const tc=await(await pdf.getPage(p)).getTextContent();let line='',lastY=null;
+  for(const it of tc.items){if(typeof it.str!=='string')continue;const y=it.transform[5],h=Math.abs(it.height||it.transform[3]||10)||10;
+   if(lastY!==null&&Math.abs(y-lastY)>h*0.5){if(line.trim())lines.push(line);line='';if(Math.abs(y-lastY)>h*1.9)lines.push('')}
+   line+=it.str;if(it.hasEOL){if(line.trim())lines.push(line);line=''}lastY=y}
+  if(line.trim())lines.push(line);lines.push('')}
+ return{text:lines.join('\n'),pages:pdf.numPages}}
+const fileB64=f=>new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=()=>rej(r.error);r.readAsDataURL(f)});
+async function imagePart(f){const url=URL.createObjectURL(f);try{const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url});
+ const k=Math.min(1,1700/Math.max(img.width,img.height));const c=document.createElement('canvas');c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+ return{inline_data:{mime_type:'image/jpeg',data:c.toDataURL('image/jpeg',0.85).split(',')[1]}}}finally{URL.revokeObjectURL(url)}}
+
+/* ================== Gemini ================== */
+async function gemini(parts,maxTok){const key=S.settings.apiKey.trim();if(!key)throw new Error('Falta la clave de Gemini');
+ const models=[...new Set([S.settings.model||'gemini-2.5-flash','gemini-2.5-flash','gemini-flash-latest','gemini-2.0-flash'])];let lastErr;
+ for(const m of models){let r;try{r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(m)}:generateContent?key=${encodeURIComponent(key)}`,{method:'POST',headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({contents:[{role:'user',parts}],generationConfig:{temperature:0.4,responseMimeType:'application/json',maxOutputTokens:maxTok||32000}})})}catch(e){throw new Error('Sin conexión a internet')}
+  if(r.status===404){lastErr=new Error('Modelo '+m+' no disponible');continue}
+  if(r.status===429)throw new Error('Se ha alcanzado el límite gratuito de Gemini por ahora. Espera un minuto y vuelve a intentarlo.');
+  if(r.status===400||r.status===403){const t=await r.text();if(/API key|API_KEY|permission/i.test(t))throw new Error('La clave de Gemini no es válida. Revísala en Ajustes.');lastErr=new Error('Gemini: '+t.slice(0,160));continue}
+  if(!r.ok){lastErr=new Error('Gemini respondió con error '+r.status);continue}
+  const d=await r.json();const txt=(((d.candidates||[])[0]||{}).content||{parts:[]}).parts.map(p=>p.text||'').join('');
+  if(!txt){lastErr=new Error('Gemini no devolvió contenido');continue}
+  return parseJSON(txt)}
+ throw lastErr||new Error('No se pudo usar Gemini')}
+function parseJSON(t){t=t.replace(/^```(?:json)?/i,'').replace(/```\s*$/,'').trim();try{return JSON.parse(t)}catch(e){const a=t.indexOf('{'),b=t.lastIndexOf('}');if(a>=0&&b>a)return JSON.parse(t.slice(a,b+1));throw new Error('La respuesta de la IA no se pudo leer')}}
+function ocrPrompt(){return'Estas páginas son el resumen escolar de un tema. Transcribe de forma LITERAL y COMPLETA todo el texto, en orden de lectura. Pon cada título en su propia línea, cada párrafo en una sola línea y las viñetas empezando por "• ". Si hay esquemas o mapas conceptuales, conviértelos en frases o viñetas. No añadas comentarios. Devuelve SOLO JSON: {"texto":"..."}'}
+function enrichPrompt(subjName,batch,nq,nd){return`Eres un profesor de Secundaria y Bachillerato especialista en alumnos con TDAH y dificultades de comprensión lectora. El alumno está en 3º de ESO o superior. Vas a preparar material de estudio de la asignatura «${subjName}» a partir del resumen del temario, que te paso dividido en fragmentos numerados.
+
+OBJETIVO: que el alumno APRUEBE el examen final de la asignatura. Sé exigente: el nivel de las preguntas tiene que ser el del examen real. La dificultad debe estar en el CONTENIDO, nunca en una redacción liosa: enunciados claros y directos, porque el alumno tiene dificultades de comprensión lectora. Explica siempre el porqué de cada respuesta.
+
+Devuelve SOLO un JSON válido con esta forma:
+{"fragmentos":[{"i":0,"titulo":"...","facil":"...","pregunta":{"tipo":"mc","enunciado":"...","opciones":["...","...","...","..."],"correcta":0,"explicacion":"...","porque":["","...","...","..."]}}],
+ "glosario":[{"palabra":"...","definicion":"..."}],
+ "preguntas":[{"tipo":"mc","enunciado":"...","opciones":["...","...","...","..."],"correcta":0,"explicacion":"...","porque":["","...","...","..."],"fragmento":0}],
+ "desarrollo":[{"enunciado":"...","puntos":["...","...","..."],"modelo":"...","fragmento":0}]}
+
+Reglas:
+1. "fragmentos": uno por cada fragmento recibido, con el mismo número "i".
+   - "titulo": máximo 6 palabras que digan de qué trata, empezando por un emoji.
+   - "facil": el mismo contenido en LECTURA FÁCIL adaptada a un alumno de ESO: frases cortas (máximo 18 palabras), una idea por frase, estructura clara (definición → características → ejemplos), voz activa, sin paréntesis. Conserva TODOS los datos y TODA la terminología técnica que entra en el examen (nombres, fechas, cifras, fórmulas, definiciones); no la sustituyas por palabras infantiles: explícala. Pon cada idea en una línea distinta (usa \\n). Puedes usar viñetas empezando la línea con "• ".
+   - "pregunta": una pregunta rápida de comprensión de la idea principal de ese fragmento (tipo "mc" con 4 opciones, o "vf"), con "explicacion" y "porque" igual que las del test.
+2. "glosario": entre 8 y 20 términos técnicos o palabras difíciles del texto (escritos exactamente como aparecen), con una definición clara de máximo 20 palabras para un alumno de 3º de ESO.
+3. "preguntas": exactamente ${nq} preguntas de test repartidas entre todos los fragmentos ("fragmento" = número i donde está la respuesta):
+   - Mezcla tipos: ~55% "mc" (4 opciones), ~20% "vf" (opciones ["Verdadero","Falso"]; correcta 0 si la frase es verdadera y 1 si es falsa), ~25% "hueco" (una frase del tema con el término clave cambiado por "_____" y 4 opciones).
+   - Nivel de examen de 3º de ESO en adelante: ~40% comprensión y datos clave, ~35% relación entre conceptos (causa-consecuencia, comparar, clasificar, secuencias/procesos), ~25% aplicación a un ejemplo o caso y vocabulario técnico.
+   - Los distractores deben ser plausibles (errores típicos de alumnos), no absurdos.
+   - Enunciados claros y directos (máximo 25 palabras). Sin dobles negaciones, sin "todas/ninguna de las anteriores", sin trampas de redacción.
+   - Opciones cortas y de longitud parecida; solo una correcta sin ninguna duda. Varía la posición de la correcta.
+   - "explicacion": 1-2 frases claras que expliquen POR QUÉ la correcta es correcta, apoyándote en el tema.
+   - "porque": lista con tantos elementos como "opciones". Para cada opción incorrecta, una frase que explique por qué es incorrecta (qué confunde o qué error típico la hace parecer buena). Para la correcta, "".
+   - Pregunta lo importante para el examen, no detalles sin importancia.
+4. "desarrollo": exactamente ${nd} preguntas de desarrollo como las del examen escrito (define y explica, compara, describe un proceso, causas y consecuencias, pon un ejemplo...). Cada una con "puntos" (entre 3 y 6 ideas clave que debe contener la respuesta para un 10) y "modelo" (respuesta modelo de 4 a 8 frases, clara, con la terminología del tema). "fragmento" = parte principal donde está la respuesta.
+5. Español de España, tratando al alumno de "tú".
+
+FRAGMENTOS:
+${batch.map(f=>`[${f.i}] ${f.titulo&&!/…$/.test(f.titulo)?f.titulo+'\n':''}${f.original}`).join('\n\n')}`}
+function normQ(o,fragIdx,nfr){if(!o||!o.enunciado)return null;let tipo=String(o.tipo||'mc').toLowerCase();
+ tipo=tipo.startsWith('v')?'vf':(tipo.startsWith('h')||tipo.includes('complet'))?'hueco':'mc';
+ let opciones=Array.isArray(o.opciones)?o.opciones.map(x=>String(x).trim()).filter(Boolean):[];let c=parseInt(o.correcta,10);let pq=Array.isArray(o.porque)?o.porque.map(x=>String(x==null?'':x).trim()):[];
+ if(tipo==='vf'){const v=o.correcta;if(typeof v==='boolean')c=v?0:1;else if(typeof v==='string'&&isNaN(parseInt(v,10)))c=/^(v|t|s|c)/i.test(v)?0:1;else if(opciones.length===2&&!isNaN(c))c=/^f/i.test(opciones[c]||'')?1:0;opciones=['Verdadero','Falso']}
+ else if(isNaN(c)&&typeof o.correcta==='string')c=opciones.findIndex(x=>norm(x)===norm(o.correcta));
+ if(!(c>=0&&c<opciones.length)||opciones.length<2)return null;
+ if(tipo==='hueco'&&!/_{2,}/.test(o.enunciado))tipo='mc';
+ let fr=Number.isFinite(+o.fragmento)?+o.fragmento:fragIdx;fr=clamp(fr|0,0,Math.max(0,nfr-1));
+ if(pq.length!==opciones.length)pq=[];if(c>3)return null;
+ return{id:uid(),tipo,enunciado:String(o.enunciado).trim(),opciones:opciones.slice(0,4),correcta:c,explicacion:String(o.explicacion||'').trim(),porque:pq.slice(0,4),frag:fr}}
+function normDev(o,fragIdx,nfr){if(!o||!o.enunciado||!o.modelo)return null;const puntos=toArr(o.puntos).slice(0,8);if(puntos.length<2)return null;
+ let fr=Number.isFinite(+o.fragmento)?+o.fragmento:fragIdx;fr=clamp(fr|0,0,Math.max(0,nfr-1));return{id:uid(),enunciado:String(o.enunciado).trim(),puntos,modelo:String(o.modelo).trim(),frag:fr}}
+
+async function buildTema({files,pasted,title,s,log}){
+ let text='';const aiParts=[];const key=!!S.settings.apiKey.trim();
+ for(const f of files){
+  if(f.type==='application/pdf'||/\.pdf$/i.test(f.name)){const id=log('📄 Leyendo «'+f.name+'»');const r=await pdfText(f);
+   if(r.text.replace(/\s/g,'').length<r.pages*60){aiParts.push({inline_data:{mime_type:'application/pdf',data:await fileB64(f)}});log('Parece escaneado: lo leerá la IA',id,'ok')}else{text+='\n\n'+r.text;log('PDF leído ('+r.pages+' pág.)',id,'ok')}}
+  else if(/^image\//.test(f.type)||/\.(jpe?g|png|heic|webp)$/i.test(f.name)){aiParts.push(await imagePart(f))}}
+ if(aiParts.length){if(!key)throw new Error('Las fotos y los PDF escaneados necesitan la IA. Pon la clave de Gemini en Zona adultos → Ajustes, o pega el texto.');
+  const id=log('🔎 La IA está leyendo las páginas…','run');const r=await gemini([{text:ocrPrompt()},...aiParts],30000);text+='\n\n'+(r.texto||'');log('Páginas leídas',id,'ok')}
+ if(pasted)text+='\n\n'+pasted;
+ text=cleanText(text);if(text.replace(/\s/g,'').length<80)throw new Error('No he encontrado texto suficiente en lo que has subido.');
+ const id2=log('✂️ Dividiendo el tema en partes cortas','run');const frags=fragmentText(text);log('Tema dividido en '+frags.length+' partes',id2,'ok');
+ let questions=[],glos=[],dev=[],ai=false;
+ if(key){try{const batches=[];let cur=[],len=0;frags.forEach((f,i)=>{if(len>0&&len+f.original.length>10000){batches.push(cur);cur=[];len=0}cur.push({i,titulo:f.titulo,original:f.original});len+=f.original.length});if(cur.length)batches.push(cur);
+   for(let b=0;b<batches.length;b++){const id=log(`✨ La IA prepara lectura adaptada y preguntas${batches.length>1?' ('+(b+1)+'/'+batches.length+')':''}… puede tardar 1 minuto`,'run');
+    const nq=clamp(Math.round(batches[b].length*3),10,35);const nd=clamp(Math.round(batches[b].length/2),2,5);const r=await gemini([{text:enrichPrompt(s.name,batches[b],nq,nd)}]);
+    (r.fragmentos||[]).forEach(o=>{const f=frags[+o.i];if(!f)return;if(o.titulo)f.titulo=String(o.titulo).trim();if(o.facil)f.facil=String(o.facil).replace(/\\n/g,'\n').trim();const q=normQ(o.pregunta,+o.i,frags.length);if(q){q.quick=true;questions.push(q);f.qid=q.id}});
+    (r.preguntas||[]).forEach(o=>{const q=normQ(o,batches[b][0].i,frags.length);if(q)questions.push(q)});
+    (r.desarrollo||[]).forEach(o=>{const d=normDev(o,batches[b][0].i,frags.length);if(d)dev.push(d)});
+    (r.glosario||[]).forEach(g=>{if(g&&g.palabra&&g.definicion)glos.push({p:String(g.palabra).trim(),d:String(g.definicion).trim()})});
+    log('Hecho',id,'ok')}
+   ai=questions.length>=4}catch(e){log('⚠️ IA: '+e.message+' — uso preguntas automáticas',null,'err');questions=[];glos=[];dev=[];frags.forEach(f=>{delete f.facil;delete f.qid})}}
+ if(!ai){const id=log('🧩 Creando preguntas automáticas','run');questions=offlineGen(frags);
+  frags.forEach((f,i)=>{const q=questions.find(q=>q.frag===i);if(q){q.quick=true;f.qid=q.id}});log(questions.length+' preguntas creadas',id,'ok')}
+ if(!questions.length)throw new Error('No he podido crear preguntas con este texto. Prueba con otro PDF o pon la clave de Gemini.');
+ return{id:uid(),title:title||'Tema '+(s.temas.length+1),created:Date.now(),ai,text,frags,glos,questions,dev,readFrags:[]}}
+
+/* ================== actividad y pausas ================== */
+const ACT={start:null,acc:0};
+const actStart=()=>{if(!ACT.start)ACT.start=Date.now()};
+const actStop=()=>{if(ACT.start){ACT.acc+=Date.now()-ACT.start;ACT.start=null}};
+const actMs=()=>ACT.acc+(ACT.start?Date.now()-ACT.start:0);
+const needBreak=()=>S.settings.breakMin>0&&actMs()>=S.settings.breakMin*60000;
+let BRK={next:null,left:0,timer:null,act:null};
+function showBreak(next){actStop();TTS.stop();BRK={next,left:60,timer:null,act:pick(BREAKS)};go('break');
+ BRK.timer=setInterval(()=>{BRK.left--;const c=$('#cd');if(c){c.style.setProperty('--p',100*(60-BRK.left)/60);c.querySelector('span').textContent=BRK.left}
+  if(BRK.left<=0){clearInterval(BRK.timer);const b=$('#brgo');if(b)b.disabled=false;beep(true)}},1000);
+ if(S.settings.autoRead)TTS.say('Pausa de un minuto. '+BRK.act[1])}
+
+/* ================== navegación ================== */
+let view={name:'home'};
+const app=document.getElementById('app');
+function go(name,p){save();view=Object.assign({name},p||{});render();window.scrollTo(0,0)}
+function render(){applyTheme();app.innerHTML=(VIEWS[view.name]||VIEWS.home)();if(view.name==='read')paintRead();if(view.name==='adults'&&view.tab==='copy')fillCopy()}
+
+/* ================== vistas ================== */
+const VIEWS={};
+function topBar(){const lv=level(),pct=Math.round(100*(S.stars%STARS_LV)/STARS_LV);
+ return`<header class="top noprint"><div class="inner"><button class="avatar" data-act="profile" aria-label="Mi perfil">${S.profile.avatar}</button>
+ <div class="hello"><b>¡Hola, ${esc(S.profile.name||'')}!</b><div class="lvl"><span>⭐ ${S.stars}</span><span class="lvbar"><i style="width:${pct}%"></i></span><span>Nivel ${lv} · ${LEVELS[Math.min(lv-1,LEVELS.length-1)]}</span></div></div>
+ <div class="streak" title="Días seguidos estudiando">🔥 ${streakNow()}</div><button class="ico" data-act="adults" aria-label="Zona de adultos">⚙️</button></div></header>`}
+VIEWS.setup=()=>`<main class="wrap center"><div class="bigemo">📚</div><h1>Leo y Aprendo</h1><p class="hint" style="font-size:19px">Tu ayudante para leer y preparar los exámenes</p>
+ <div class="card" style="text-align:left"><label class="lb">¿Cómo te llamas?</label><input id="su-name" class="inp" placeholder="Escribe tu nombre" value="${esc(S.profile.name)}" autocomplete="off">
+ <label class="lb">Elige tu personaje</label><div class="avs">${AVATARS.filter(a=>a[1]===1).map(a=>`<button class="av ${a[0]===S.profile.avatar?'on':''}" data-act="suAv" data-e="${a[0]}">${a[0]}</button>`).join('')}</div>
+ <label class="lb">Código para adultos (4 números)</label><input id="su-pin" class="inp" inputmode="numeric" maxlength="4" placeholder="Lo pone un adulto (familia o profesor)" autocomplete="off">
+ <p class="hint">Sirve para entrar en la zona de adultos: ajustes, progreso y borrar temas. Se puede dejar vacío.</p>
+ <button class="btn big pri" data-act="suGo" style="margin-top:12px">¡Empezar! 🚀</button></div></main>`;
+VIEWS.home=()=>{const subs=S.subjects;let cur=subj(S.activeSubject)||subs[0];if(cur)S.activeSubject=cur.id;
+ return topBar()+`<nav class="tabs noprint">${subs.map(s=>`<button class="tab ${cur&&s.id===cur.id?'on':''}" style="--c:${s.color}" data-act="tab" data-id="${s.id}">${s.emoji} ${esc(s.name)}</button>`).join('')}<button class="tab add" data-act="addSubject">＋ Asignatura</button></nav>
+ <main class="wrap">${backupBanner()}${cur?subjectBody(cur):`<div class="card empty"><div class="big">🎒</div><h2>Todavía no hay asignaturas</h2><p class="hint" style="font-size:19px">Añade la primera (por ejemplo Biología y Geología) y después mete el PDF del tema.</p><button class="btn big pri" data-act="addSubject">＋ Añadir asignatura</button></div>`}</main>`};
+function subjectBody(s){const nq=s.temas.reduce((a,t)=>a+t.questions.length,0),nf=fallosOf(s).length;const p=subjPrep(s),ps=prepState(p);
+ const weak=s.temas.filter(t=>t.questions.length).sort((a,b)=>temaPrep(a)-temaPrep(b))[0];const dt=daysTo(s.examDate),ls=lastSim(s);
+ const dl=dt==null?'📅 Poner fecha del examen':dt>1?`📅 Examen en ${dt} días`:dt===1?'📅 Examen mañana':dt===0?'📅 ¡Examen hoy!':'📅 Examen pasado · cambiar';
+ return`<section class="subhead" style="--c:${s.color}"><h2>${s.emoji} ${esc(s.name)}</h2>
+ ${nq?`<div class="card" style="margin-top:6px"><div class="row between"><b style="font-size:20px">📈 Preparación para el examen</b><button class="btn sm" data-act="examDate">${dl}</button></div>
+ <div class="pbar"><i style="width:${Math.max(p,2)}%;background:${ps[0]}"></i><span>${p}%</span></div>
+ <div class="hint" style="font-size:17px"><b style="color:${ps[0]}">${ps[1]}</b>${weak&&s.temas.length>1?` · Lo más flojo: «${esc(weak.title)}» (${temaPrep(weak)}%)`:''}${ls!=null?` · Último simulacro: <b>${fmtN(ls)}</b>`:''}</div>
+ ${dt!=null&&dt>=0&&dt<=10&&p<70?`<div class="warnline">⚠️ Quedan ${dt} días: haz la sesión de hoy cada día y un simulacro cada 2 días.</div>`:''}</div>
+ <button class="btn big pri" data-act="today" style="margin-bottom:12px">▶ Sesión de hoy <small>· lo que más necesitas repasar</small></button>`:''}
+ <div class="row"><button class="btn tile" data-act="exam" ${nq?'':'disabled'}>🎓 Simulacro de examen</button><button class="btn tile" data-act="fallos" ${nf?'':'disabled'}>🔁 Mis fallos (${nf})</button><button class="btn tile" data-act="hist">📚 Historial (${S.history.filter(h=>h.sid===s.id&&h.det).length})</button></div></section>
+ <div class="temas" style="--c:${s.color}">${s.temas.map(t=>temaCard(s,t)).join('')}<button class="addtema" data-act="addTema">＋ Añadir tema<br><small>PDF o fotos del resumen</small></button></div>`}
+function temaCard(s,t){const p=temaPrep(t),m=t.questions.filter(q=>st(q.id)&&st(q.id).box>=3).length,rd=new Set(t.readFrags).size,nf=t.frags.length,da=devAvg(t);
+ return`<div class="tema"><h3>${esc(t.title)} ${Date.now()-t.created<3*DAY&&!rd?'<span class="badge">Nuevo</span>':''}</h3>
+ <div class="tstats"><div class="ring" style="--p:${p}"><span>${p}%</span></div><div class="mini">📖 Leído ${rd} de ${nf}<div class="mbar"><i style="width:${nf?100*rd/nf:0}%"></i></div><div style="margin-top:6px">🏆 Dominadas ${m} de ${t.questions.length}</div>${da!=null?`<div>✍️ Desarrollo: ${(S.devstats&&t.dev.some(d=>S.devstats[d.id]))?fmtN(da):'sin hacer'}</div>`:''}</div></div>
+ <div class="row"><button class="btn" data-act="read" data-t="${t.id}">📖 Leer</button><button class="btn pri" data-act="test" data-t="${t.id}">✏️ Test</button></div></div>`}
+VIEWS.addTema=()=>{const s=subj(view.sid);const key=!!S.settings.apiKey.trim();
+ return`<header class="top"><div class="inner"><button class="ico" data-act="home">←</button><div class="ttl">Nuevo tema · ${s.emoji} ${esc(s.name)}</div></div></header>
+ <main class="wrap"><div class="card" id="at-form"><label class="lb">Nombre del tema</label><input id="at-title" class="inp" placeholder="Ej: Tema 4 · La célula" autocomplete="off">
+ <label class="lb">¿Qué tienes del tema?</label>
+ <div class="pick"><label class="btn big">📄 Un PDF<input type="file" class="vh" data-file="1" accept="application/pdf,.pdf" multiple></label>
+ <label class="btn big">📷 Hacer fotos<input type="file" class="vh" data-file="1" accept="image/*" capture="environment"></label>
+ <label class="btn big">🖼️ Fotos guardadas<input type="file" class="vh" data-file="1" accept="image/*" multiple></label></div>
+ <div class="files" id="at-files"></div>
+ <details style="margin-top:8px"><summary class="hint" style="font-size:18px;cursor:pointer">✍️ O pegar el texto a mano</summary><textarea id="at-text" class="inp" rows="7" placeholder="Pega aquí el texto del tema"></textarea></details>
+ <p class="hint">${key?'✨ IA activada: se hará una versión de <b>lectura adaptada</b>, un glosario de términos, preguntas tipo test con la explicación de cada error y <b>preguntas de desarrollo</b> como las del examen.':'ℹ️ Sin clave de Gemini se crean preguntas automáticas sencillas (rellenar huecos y verdadero/falso). Las <b>fotos</b> y los <b>PDF escaneados</b> necesitan la clave: Zona adultos → Ajustes.'}</p>
+ <button class="btn big pri" id="at-go" data-act="atGo">✨ Preparar el tema</button></div><ul class="prog" id="at-prog"></ul></main>`};
+let PEND=[];
+function paintFiles(){const el=$('#at-files');if(el)el.innerHTML=PEND.map((f,i)=>`<div class="file">${/pdf/i.test(f.type)||/\.pdf$/i.test(f.name)?'📄':'🖼️'}<span>${esc(f.name)}</span><button class="btn sm" data-act="atDel" data-i="${i}">✖</button></div>`).join('')}
+
+/* ---------- lectura ---------- */
+let R={};
+function startRead(sid,tid,fi){const{t}=getST(sid,tid);if(!t)return;if(fi==null){fi=t.frags.findIndex((_,i)=>!t.readFrags.includes(i));if(fi<0)fi=0}
+ TTS.stop();R={tick:Date.now(),sid,tid,fi,si:0,mode:S.settings.readMode||'turnos',easy:true,playing:false,finished:false,qPhase:false,token:0,sents:[],lines:[]};prepFrag();actStart();go('read')}
+function curFrag(){const{t}=getST(R.sid,R.tid);return t.frags[R.fi]}
+function prepFrag(){const f=curFrag();const text=(R.easy&&f.facil)?f.facil:f.original;R.sents=[];R.lines=[];
+ text.split('\n').map(l=>l.trim()).filter(Boolean).forEach(l=>{const idx=[];splitSentences(l).forEach(s=>{idx.push(R.sents.length);R.sents.push(s)});if(idx.length)R.lines.push({b:l.startsWith('• '),idx})});
+ R.si=0;R.finished=false;R.qPhase=false;R.playing=false}
+function glosMap(t){const m=new Map();(t.glos||[]).forEach(g=>{wordsOf(g.p).length===1&&m.set(norm(g.p),g)});return m}
+function glosFind(m,w){const n=norm(w);return m.get(n)||m.get(n.replace(/es$/,''))||m.get(n.replace(/s$/,''))||null}
+function sentHtml(s,i,gm){return`<span class="s" data-si="${i}">`+s.split(/(\s+)/).map(tok=>{if(/^\s+$/.test(tok)||!tok)return tok;const w=(tok.match(/[A-Za-zÁÉÍÓÚÜÑáéíóúüñ0-9]+/)||[''])[0];if(!w)return esc(tok);
+ return`<span class="w${glosFind(gm,w)?' g':''}" data-act="word" data-w="${esc(w)}">${esc(tok)}</span>`}).join('')+'</span>'}
+VIEWS.read=()=>{const{s,t}=getST(R.sid,R.tid);const f=t.frags[R.fi];const gm=glosMap(t);
+ return`<header class="top"><div class="inner"><button class="ico" data-act="exitRead" aria-label="Salir">✖</button><div class="ttl">📖 ${esc(t.title)}</div><button class="ico" data-act="fs" data-d="-2">A−</button><button class="ico" data-act="fs" data-d="2">A+</button></div></header>
+ <main class="wrap" style="--c:${s.color}"><div class="steps">${t.frags.map((_,i)=>`<i class="${i===R.fi?'c':t.readFrags.includes(i)?'d':''}"></i>`).join('')}</div>
+ <div class="seg">${Object.keys(MODE_L).map(m=>`<button class="${R.mode===m?'on':''}" data-act="rmode" data-m="${m}">${MODE_L[m]}</button>`).join('')}</div>
+ ${f.facil?`<div class="seg sm"><button class="${R.easy?'on':''}" data-act="reasy" data-v="1">🌟 Texto fácil</button><button class="${!R.easy?'on':''}" data-act="reasy" data-v="0">📄 Texto del cole</button></div>`:''}
+ <article class="card text"><h2 class="ftitle">${esc(f.titulo||'Parte '+(R.fi+1))}<small>Parte ${R.fi+1} de ${t.frags.length}</small></h2>
+ <div id="rtext">${R.lines.map(l=>`<p class="${l.b?'bl':''}">${l.idx.map(i=>sentHtml(R.sents[i],i,gm)).join(' ')}</p>`).join('')}</div></article>
+ <div id="rctl"></div>
+ <div class="navrow"><button class="btn sm" data-act="rfrag" data-d="-1" ${R.fi>0?'':'disabled'}>◀ Parte anterior</button>${t.readFrags.includes(R.fi)?`<button class="btn sm" data-act="rfrag" data-d="1">${R.fi<t.frags.length-1?'Siguiente parte ▶':'Terminar 🏁'}</button>`:''}</div></main>`};
+const isMine=i=>R.mode==='turnos'&&i%2===1;
+function paintRead(){document.querySelectorAll('#rtext .s').forEach(el=>{const i=+el.dataset.si;el.classList.toggle('cur',i===R.si&&!R.finished&&(R.mode!=='escucho'||R.playing||R.si>0));el.classList.toggle('mine',isMine(i))});
+ const c=$('#rctl');if(c)c.innerHTML=ctlHtml();const cur=$('#rtext .s.cur');if(cur&&R.si>0)cur.scrollIntoView({block:'center',behavior:'smooth'})}
+function ctlHtml(){if(R.finished)return finishCtl();const n=R.sents.length;
+ if(R.mode==='escucho')return R.playing?`<div class="listen">🔊 Escucha y sigue con los ojos la frase amarilla</div><div class="ctl"><button class="btn big" data-act="rpause">⏸ Pausa</button></div>`
+  :`<div class="ctl"><button class="btn big pri" data-act="rplay">▶ ${R.si>0?'Seguir':'Escuchar'}</button>${R.si>0?'<button class="btn big" data-act="rrestart">⏮ Desde el principio</button>':''}</div>`;
+ if(R.mode==='turnos'){if(R.playing)return`<div class="listen">🔊 Escucha la frase amarilla. ¡Luego te toca a ti!</div><div class="ctl"><button class="btn big" data-act="rpause">⏸ Pausa</button></div>`;
+  if(isMine(R.si))return`<div class="turn">👉 ¡Te toca! Lee en voz alta la frase verde</div><div class="ctl"><button class="btn big" data-act="rsay">🔊 Ayúdame</button><button class="btn big go" data-act="rmine">✅ Ya la he leído</button></div>`;
+  return`<div class="ctl"><button class="btn big pri" data-act="rplay">▶ ${R.si>0?'Seguir':'Empezar'}</button></div><p class="hint center">Yo leo las frases amarillas y tú las verdes, en voz alta</p>`}
+ return`<p class="hint center">Lee la frase amarilla. Toca una palabra si no la entiendes. (${R.si+1} de ${n})</p><div class="ctl"><button class="btn big" data-act="rsay">🔊 Léemela</button><button class="btn big pri" data-act="rnext">Siguiente frase ▶</button></div>`}
+function finishCtl(){const{t}=getST(R.sid,R.tid);const last=R.fi>=t.frags.length-1;
+ if(R.qPhase)return`<div class="card" style="border-color:var(--accent)"><div class="qtag">🧠 Pregunta rápida</div>${qHtml()}</div>`;
+ return`<div class="donebox">✅ ¡Parte leída!</div><div class="ctl"><button class="btn big" data-act="ragain">🔁 Leer otra vez</button><button class="btn big go" data-act="rfrag" data-d="1">${last?'🏁 Terminar tema':'Siguiente parte ▶'}</button></div>`}
+async function readLoop(){TTS.stop();const tok=++R.token;R.playing=true;paintRead();
+ while(R.si<R.sents.length){if(tok!==R.token)return;if(R.mode==='yo'||isMine(R.si)){R.playing=false;paintRead();return}
+  paintRead();const ok=await TTS.seq([R.sents[R.si]]);if(tok!==R.token)return;if(!ok){R.playing=false;paintRead();return}rcount(R.mode==='escucho'?'esc':'tApp');R.si++}
+ R.playing=false;finishFrag()}
+function stopReading(){R.token++;R.playing=false;TTS.stop()}
+function finishFrag(){const{t}=getST(R.sid,R.tid);R.finished=true;R.playing=false;
+ rmark('frags');if(!t.readFrags.includes(R.fi)){t.readFrags.push(R.fi);addStars(1)}
+ const f=curFrag();const q=f.qid&&findQ(t,f.qid);
+ if(q&&!R.qDone){R.qPhase=true;startQS(q,'read',{temaId:t.id});paintRead();if(S.settings.autoRead)setTimeout(()=>speakQ('Pregunta rápida.'),300)}else{paintRead();touchStreak()}
+ save()}
+function goFrag(i){stopReading();const{t}=getST(R.sid,R.tid);
+ if(i>=t.frags.length){actStop();touchStreak();if(t.readFrags.length>=t.frags.length)award('lector');S.history.push({d:Date.now(),sid:R.sid,tid:R.tid,mode:'lectura',ok:0,total:0,secs:0});save();go('readDone');return}
+ const doIt=()=>{R.fi=clamp(i,0,t.frags.length-1);R.qDone=false;R.tick=Date.now();prepFrag();actStart();go('read')};
+ if(needBreak())showBreak(doIt);else doIt()}
+VIEWS.readDone=()=>{const{s,t}=getST(R.sid,R.tid);return`<main class="wrap center" style="--c:${s.color}"><div class="bigemo bounce">📚</div><h1>¡Has terminado de leer!</h1><p style="font-size:21px">«${esc(t.title)}»</p>
+ <div class="card"><p style="font-size:20px">Ahora haz el test para comprobar lo que has aprendido.</p><div class="row"><button class="btn big pri" data-act="test" data-t="${t.id}">✏️ Hacer el test</button><button class="btn big" data-act="home">🏠 Volver</button></div></div></main>`};
+
+/* ---------- preguntas ---------- */
+let QS=null;
+function startQS(q,ctx,extra){QS=Object.assign({q,ctx,order:q.tipo==='vf'?[0,1]:shuffle(q.opciones.map((_,i)=>i)),sel:null,checked:false,hint:false,ok:null,tries:0,elim:[]},extra||{})}
+function startDev(d,ctx,temaId){QS={dev:true,d,ctx,temaId,phase:'write',text:'',res:null,checks:[],hintShown:false}}
+function qLabel(q){return{mc:'Elige la respuesta correcta',vf:'¿Verdadero o falso?',hueco:'Completa la frase'}[q.tipo]}
+const whyWrong=(q,oi)=>(q.porque||[])[oi]||'';
+function fbHtml(){const q=QS.q,ch=QS.order[QS.sel];
+ if(QS.ok)return`<div class="fb ok"><b>${esc(QS.praise)} ✅</b>${q.explicacion?'<div class="why">'+esc(q.explicacion)+'</div>':''}${QS.hint?'<div class="why hint">Has usado pista: cuenta como acierto, pero tendrás que acertarla sin ayuda para dominarla.</div>':''}</div>`;
+ return`<div class="fb ko"><b>${esc(QS.praise)}</b><div class="why">❌ Has elegido <b>«${esc(q.opciones[ch])}»</b>. ${esc(whyWrong(q,ch))}</div><div class="why">✅ La correcta es <b>«${esc(q.opciones[q.correcta])}»</b>. ${esc(q.explicacion)}</div></div>`}
+function qHtml(){if(QS.dev)return devHtml();const q=QS.q,exam=QS.ctx==='exam';const L='ABCD';
+ const retryRead=QS.ctx==='read'&&QS.checked&&!QS.ok&&QS.tries<2;const showAns=QS.checked&&!exam&&!retryRead;
+ const enun=esc(q.enunciado).replace(/_{2,}/g,()=>`<span class="gap">${showAns?esc(q.opciones[q.correcta]):(QS.sel!=null&&q.tipo==='hueco'?esc(q.opciones[QS.order[QS.sel]]):'&nbsp;')}</span>`);
+ let h=`${QS.retry?'<div class="qtag retry">🔁 Segunda oportunidad</div> ':''}<div class="qtag">${qLabel(q)}</div><div class="qtext">${enun}</div>`;
+ h+=QS.order.map((oi,k)=>{const el=QS.elim.includes(k);let c='';
+  if(el)c='ko dim';else if(showAns)c=oi===q.correcta?'ok':(QS.sel===k?'ko':'dim');else if(retryRead)c=QS.sel===k?'ko':'';else if(QS.sel===k)c='sel';
+  return`<button class="opt ${c}" data-act="qsel" data-k="${k}" ${QS.checked||el?'disabled':''}><b>${q.tipo==='vf'?(oi===0?'✔':'✘'):L[k]}</b><span>${esc(q.opciones[oi])}</span></button>`}).join('');
+ if(!QS.checked){const canHint=!exam&&(QS.ctx==='read'||S.settings.hints);
+  h+=`<div class="ctl"><button class="btn" data-act="qspeak">🔊 Escuchar</button>${canHint?'<button class="btn" data-act="qhint">💡 Pista</button>':''}</div>`;
+  if(S.settings.twoStep||exam)h+=`<button class="btn big pri" data-act="qcheck" ${QS.sel==null?'disabled':''}>${exam?'Responder ▶':'✔ Comprobar'}</button>`}
+ else if(retryRead){const ch=QS.order[QS.sel];h+=`<div class="fb ko"><b>No es correcta.</b><div class="why">❌ «${esc(q.opciones[ch])}»: ${esc(whyWrong(q,ch))}</div><div class="why">Vuelve a leer la frase marcada y prueba otra vez. Para seguir tienes que entenderlo.</div></div><div class="ctl"><button class="btn big pri" data-act="qretry">📖 Releer y reintentar</button></div>`}
+ else{h+=fbHtml();h+=`<div class="ctl">${QS.ok?'':'<button class="btn big" data-act="qwhere">📖 Ver dónde lo dice</button>'}<button class="btn big go" data-act="qnext">${QS.ctx==='read'?(lastFrag()?'🏁 Terminar':'Siguiente parte ▶'):'Siguiente ▶'}</button></div>`}
+ return h}
+function lastFrag(){const{t}=getST(R.sid,R.tid);return R.fi>=t.frags.length-1}
+function repaintQ(){if(QS.ctx==='read'){paintRead();return}const el=$('#qarea');if(el)el.innerHTML=qHtml()}
+function speakQ(pre){if(QS.dev){TTS.say((pre?pre+' ':'')+QS.d.enunciado);return}const q=QS.q;const arr=[];if(pre)arr.push(pre);arr.push(q.enunciado.replace(/_{2,}/g,' hueco '));
+ if(q.tipo==='vf')arr.push('¿Verdadero o falso?');else QS.order.forEach((oi,k)=>arr.push('ABCD'[k]+': '+q.opciones[oi]));TTS.stop();TTS.seq(arr)}
+function hintData(q,t){const f=t.frags[q.frag]||t.frags[0];const sents=splitSentences(f.original);const key=new Set(wordsOf(q.enunciado+' '+(q.opciones?q.opciones[q.correcta]:(q.puntos||[]).join(' '))).map(norm).filter(w=>w.length>3&&!STOP.has(w)));
+ let best=-1,bi=0;sents.forEach((s,i)=>{let sc=0;wordsOf(s).forEach(w=>{if(key.has(norm(w)))sc++});if(sc>best){best=sc;bi=i}});return{f,sents,bi}}
+function showWhere(q,t,title){const{f,sents,bi}=hintData(q,t);MCB.sent=sents[bi];
+ modal(`<h2>${title}</h2><p class="hint">${esc(f.titulo)}</p><div class="text" style="border:none">${sents.map((s,i)=>`<span class="s ${i===bi?'cur':''}">${esc(s)}</span>`).join(' ')}</div><div class="row" style="margin-top:14px"><button class="btn" data-act="msay">🔊 Leer la frase amarilla</button><button class="btn pri" data-act="mclose">Entendido</button></div>`)}
+
+/* ---------- desarrollo ---------- */
+const ulist=(t,a)=>a&&a.length?`<h3>${t}</h3><ul class="fbl">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'';
+function devHtml(){const d=QS.d,exam=QS.ctx==='exam';let h=`<div class="qtag dev">✍️ Pregunta de desarrollo · como en el examen</div><div class="qtext">${esc(d.enunciado)}</div>`;
+ if(QS.phase==='write'){h+=`<div class="ctl"><button class="btn" data-act="qspeak">🔊 Escuchar</button>${exam?'':'<button class="btn" data-act="devhint">💡 ¿Qué debe tener?</button>'}</div>
+  ${QS.hintShown?`<p class="tipbox">💡 Para un 10, tu respuesta debe tocar <b>${d.puntos.length} ideas clave</b>. La primera: <i>${esc(d.puntos[0])}</i></p>`:''}
+  <textarea id="devtxt" class="inp devta" rows="8" placeholder="Escribe aquí tu respuesta con frases completas…">${esc(QS.text)}</textarea>
+  <p class="hint">🎤 Puedes dictar con el micrófono del teclado del iPad. Usa las palabras técnicas del tema y responde exactamente a lo que te preguntan.</p>
+  <button class="btn big pri" data-act="devgo">${exam?'Entregar ▶':'✔ Corregir'}</button>`}
+ else if(QS.phase==='grading')h+=`<div class="listen"><span class="spin"></span> Corrigiendo tu respuesta como lo haría el profesor…</div>`;
+ else if(QS.phase==='self'){h+=`<div class="card" style="background:#fffdf8;box-shadow:none"><b>Tu respuesta:</b><p style="white-space:pre-wrap">${esc(QS.text)||'<i>(vacía)</i>'}</p></div><h3>📄 Respuesta modelo</h3><p class="model">${esc(d.modelo)}</p><button class="btn" data-act="devsay">🔊 Leer la respuesta modelo</button>
+  <h3>Marca con sinceridad las ideas que SÍ has puesto bien:</h3>${d.puntos.map((p,i)=>`<label class="chk"><input type="checkbox" data-chg="devchk" data-i="${i}" ${QS.checks[i]?'checked':''}><span>${esc(p)}</span></label>`).join('')}<button class="btn big pri" data-act="devself">Ver mi nota</button>`}
+ else h+=devResHtml(QS.res,d)+`<div class="ctl"><button class="btn big go" data-act="qnext">Siguiente ▶</button></div>`;
+ return h}
+function devResHtml(r,d){return`<div class="fb ${r.nota>=5?'ok':'ko'}"><div class="nota sm">${fmtN(r.nota)}</div><b>${r.nota>=8?'¡Muy buena respuesta!':r.nota>=5?'Aprobada, pero le falta para la nota alta':'Con esta respuesta suspenderías la pregunta'}</b>${r.self?'<div class="hint">Nota calculada con tu autocorrección.</div>':''}<div style="clear:both"></div></div>
+ ${ulist('✅ Lo que has puesto bien',r.bien)}${ulist('❌ Lo que falta o está incompleto',r.falta)}${ulist('⚠️ Errores',r.errores)}${r.consejo?`<p class="tipbox">💡 ${esc(r.consejo)}</p>`:''}
+ ${r.mejorada?`<details open><summary><b>📝 Tu respuesta, mejorada</b></summary><p class="model">${esc(r.mejorada)}</p></details>`:''}
+ <details ${r.mejorada?'':'open'}><summary><b>📄 Respuesta modelo</b></summary><p class="model">${esc(d.modelo)}</p></details><button class="btn" data-act="devsay">🔊 Leer la respuesta modelo</button>`}
+function gradePrompt(sub,d,ans){return`Eres profesor de «${sub}» en Secundaria y corriges una pregunta de desarrollo de un examen. El alumno (3º de ESO o superior) tiene TDAH y dificultades de comprensión lectora.
+Corrige con la EXIGENCIA de un examen real: la nota tiene que ser la que pondría su profesor por el CONTENIDO (ideas correctas, completas, bien relacionadas y con la terminología del tema). No regales nota. No penalices faltas de ortografía ni de redacción salvo que impidan entender la idea o cambien un término técnico.
+Explica con frases cortas y claras, tratándole de tú.
+
+PREGUNTA: ${d.enunciado}
+IDEAS CLAVE PARA UN 10:
+${d.puntos.map(p=>'- '+p).join('\n')}
+RESPUESTA MODELO: ${d.modelo}
+RESPUESTA DEL ALUMNO: """${ans}"""
+
+Devuelve SOLO JSON: {"nota":número de 0 a 10 con un decimal,"bien":["idea que ha puesto bien"],"falta":["idea que falta o está incompleta, y por qué es importante en el examen"],"errores":["lo que ha puesto mal → por qué está mal y qué es lo correcto"],"consejo":"un consejo concreto para sacar más nota en esta pregunta","mejorada":"SU respuesta corregida y completada, conservando su forma de escribir (4-8 frases)"}`}
+function finishDev(r){QS.res=r;QS.phase='done';const x=S.devstats[QS.d.id]||(S.devstats[QS.d.id]={n:0,last:0,best:0,d:0});x.n++;x.last=r.nota;x.best=Math.max(x.best,r.nota);x.d=Date.now();
+ const ok=r.nota>=5;if(Qz&&QS.ctx!=='read')Qz.results.push({temaId:QS.temaId,devId:QS.d.id,dev:true,ok,nota:r.nota,res:r,text:QS.text});
+ if(ok){const g=r.nota>=8?3:2;if(Qz)Qz.stars+=g;addStars(g)}
+ save();if(QS.ctx==='exam'){quizNext();return}beep(ok);repaintQ();
+ if(S.settings.autoRead)TTS.say('Tu nota es '+fmtN(r.nota)+'. '+(r.falta&&r.falta.length?'Te falta: '+r.falta.slice(0,2).join('. '):''))}
+
+/* ---------- test ---------- */
+let Qz=null;
+function devPick(temas,n,random){const all=[];temas.forEach(t=>(t.dev||[]).forEach(d=>all.push({t,d})));const today=dstr(Date.now());
+ const sc=d=>{const x=S.devstats[d.id];return x?x.last/10+0.15:0};
+ let c=all.filter(x=>{const y=S.devstats[x.d.id];return !(y&&dstr(y.d)===today&&y.last>=5)});
+ c=random?shuffle(c):c.map(x=>({x,k:sc(x.d)+Math.random()*0.2})).sort((a,b)=>a.k-b.k).map(o=>o.x);
+ const out=[],used=new Set();for(const x of c){if(out.length>=n)break;if(random&&used.has(x.t.id)&&c.some(y=>!used.has(y.t.id)))continue;used.add(x.t.id);out.push({temaId:x.t.id,devId:x.d.id,dev:true})}return out}
+function buildList(mode,s,tid){const n=S.settings.sessionLen;let list=[];const now=Date.now();
+ if(mode==='test'){const t=s.temas.find(x=>x.id===tid);const qs=t.questions;
+  const due=shuffle(qs.filter(q=>st(q.id)&&st(q.id).next<=now)).sort((a,b)=>st(a.id).box-st(b.id).box);const un=shuffle(qs.filter(q=>!st(q.id)));const rest=shuffle(qs.filter(q=>st(q.id)&&st(q.id).next>now));
+  const sel=[];for(const q of due.concat(un,rest)){if(sel.length>=n)break;if(!sel.includes(q))sel.push(q)}list=shuffle(sel).map(q=>({temaId:t.id,qid:q.id})).concat(devPick([t],1))}
+ else if(mode==='today'){const c=[];s.temas.forEach(t=>{const tp=temaPrep(t)/100;t.questions.forEach(q=>{const x=st(q.id);let k;if(!x)k=1.2+tp;else if(x.next<=now)k=x.box*0.5;else k=3+x.box;c.push({k:k+Math.random()*0.4,it:{temaId:t.id,qid:q.id}})})});
+  c.sort((a,b)=>a.k-b.k);list=shuffle(c.slice(0,n+2).map(o=>o.it)).concat(devPick(s.temas,1))}
+ else if(mode==='exam'){const pools=s.temas.map(t=>shuffle(t.questions).map(q=>({temaId:t.id,qid:q.id})));let k=0;while(list.length<20&&pools.some(p=>p.length)){const p=pools[k%pools.length];if(p.length)list.push(p.shift());k++}list=shuffle(list).concat(devPick(s.temas,2,true))}
+ else{list=shuffle(fallosOf(s)).slice(0,Math.max(n,8));const bad=[];s.temas.forEach(t=>(t.dev||[]).forEach(d=>{const x=S.devstats[d.id];if(x&&x.last<5)bad.push({temaId:t.id,devId:d.id,dev:true})}));list=list.concat(shuffle(bad).slice(0,2))}
+ return list}
+function startQuiz(mode,tid,custom){const s=subj(S.activeSubject);if(!s)return;const list=custom||buildList(mode,s,tid);if(!list.length){toast(mode==='fallos'?'No tienes fallos pendientes 👏':'No hay preguntas todavía');return}
+ TTS.stop();Qz={mode,sid:s.id,tid,list,idx:0,results:[],stars:0,start:Date.now()};actStart();showQ()}
+function skipQ(){Qz.idx++;if(Qz.idx>=Qz.list.length)finishQuiz();else showQ()}
+function showQ(){const it=Qz.list[Qz.idx];const{t}=getST(Qz.sid,it.temaId);const ctx=Qz.mode==='exam'?'exam':'quiz';
+ if(it.dev){const d=t&&(t.dev||[]).find(x=>x.id===it.devId);if(!d)return skipQ();startDev(d,ctx,it.temaId);go('quiz');if(S.settings.autoRead)TTS.say('Pregunta de desarrollo. '+d.enunciado);return}
+ const q=t&&findQ(t,it.qid);if(!q)return skipQ();
+ startQS(q,ctx,{retry:it.retry,temaId:it.temaId});go('quiz');if(S.settings.autoRead)speakQ()}
+const QTITLE={exam:'🎓 Simulacro de examen',fallos:'🔁 Mis fallos',today:'▶ Sesión de hoy'};
+VIEWS.quiz=()=>{const s=subj(Qz.sid);const tot=Qz.list.length;const title=QTITLE[Qz.mode]||'✏️ '+esc((s.temas.find(t=>t.id===Qz.tid)||{}).title||'Test');
+ return`<header class="top"><div class="inner"><button class="ico" data-act="exitQuiz" aria-label="Salir">✖</button><div class="ttl">${title}</div><div class="qcount">⭐ ${Qz.stars}</div></div></header>
+ <main class="wrap" style="--c:${s.color}"><div class="qbar"><div class="mbar"><i style="width:${100*Qz.idx/tot}%"></i></div><span class="qcount">${Qz.idx+1} / ${tot}</span></div>
+ <div class="card" id="qarea">${qHtml()}</div></main>`};
+function checkQ(){if(QS.dev||QS.sel==null||QS.checked)return;const q=QS.q;QS.checked=true;QS.tries++;QS.ok=QS.order[QS.sel]===q.correcta;const ch=QS.order[QS.sel];
+ if(QS.ctx==='exam'){recordQ(q.id,QS.ok,false);Qz.results.push({temaId:QS.temaId,qid:q.id,ok:QS.ok,ans:ch});save();quizNext();return}
+ QS.praise=QS.ok?pick(PRAISE):pick(OOPS);beep(QS.ok);
+ if(QS.ctx==='read'){if(QS.tries===1){recordQ(q.id,QS.ok,false);if(QS.ok)addStars(1)}if(QS.ok||QS.tries>=2)R.qDone=true}
+ else{recordQ(q.id,QS.ok,QS.hint);Qz.results.push({temaId:QS.temaId,qid:q.id,ok:QS.ok,hint:QS.hint,retry:!!QS.retry,ans:ch});
+  if(QS.ok){const g=QS.hint?0:1;Qz.stars+=g;addStars(g)}else if(!QS.retry){let k=Qz.list.findIndex((x,i)=>i>Qz.idx&&x.dev);if(k<0)k=Qz.list.length;Qz.list.splice(k,0,{temaId:QS.temaId,qid:q.id,retry:true})}}
+ save();repaintQ();if(QS.ctx!=='read'){const c=$('.qcount');if(c)c.textContent='⭐ '+Qz.stars}
+ if(S.settings.autoRead){TTS.stop();if(QS.ok)TTS.seq([QS.praise,q.explicacion||'']);else if(QS.ctx==='read'&&QS.tries<2)TTS.seq(['No es correcta.',whyWrong(q,ch),'Vuelve a leer la frase marcada y prueba otra vez.']);
+  else TTS.seq(['Has elegido: '+q.opciones[ch]+'.',whyWrong(q,ch),'La correcta es: '+q.opciones[q.correcta]+'.',q.explicacion||''])}}
+function quizNext(){TTS.stop();Qz.idx++;if(Qz.idx>=Qz.list.length){finishQuiz();return}if(needBreak()&&Qz.mode!=='exam')showBreak(()=>{actStart();showQ()});else showQ()}
+function quizScore(){const first=Qz.results.filter(r=>!r.retry);const tq=first.filter(r=>!r.dev),dq=first.filter(r=>r.dev);const ok=tq.filter(r=>r.ok).length,tot=tq.length;
+ const tp=tot?ok/tot:null,da=dq.length?dq.reduce((a,r)=>a+r.nota,0)/dq.length:null;const nota=tp==null?(da||0):da==null?tp*10:0.7*tp*10+0.3*da;return{first,tq,dq,ok,tot,da,nota}}
+function finishQuiz(){actStop();const sc=quizScore();const{ok,tot,nota}=sc;
+ if(tot>=5&&ok===tot&&!sc.dq.some(r=>r.nota<8)){Qz.stars+=3;addStars(3);award('perfecto')}if(Qz.mode==='exam'&&nota>=5)award('examen');
+ award('primer');touchStreak();const s=subj(Qz.sid);s.temas.forEach(t=>{if(t.questions.length>=5&&mastery(t)===100)award('dominado')});
+ const det=sc.first.map(r=>{const{t}=getST(Qz.sid,r.temaId);if(r.dev){const d=t&&(t.dev||[]).find(x=>x.id===r.devId);return{dev:1,tema:t?t.title:'',enunciado:d?d.enunciado:'',modelo:d?d.modelo:'',text:r.text||'',nota:r.nota,res:r.res}}
+  const q=t&&findQ(t,r.qid);return q?{tema:t.title,tipo:q.tipo,enunciado:q.enunciado,opciones:q.opciones.slice(),correcta:q.correcta,ans:r.ans,ok:r.ok,hint:!!r.hint,explicacion:q.explicacion||'',porque:(q.porque||[]).slice()}:null}).filter(Boolean);
+ S.history.push({id:uid(),d:Date.now(),sid:Qz.sid,sname:s.name,tid:Qz.tid||null,tname:Qz.tid?((s.temas.find(x=>x.id===Qz.tid)||{}).title||''):'',mode:Qz.mode,ok,total:tot,nota:Math.round(nota*10)/10,secs:Math.round((Date.now()-Qz.start)/1000),det});Qz.nota=nota;save();go('result');if(nota>=8)setTimeout(confetti,250);
+ if(S.settings.autoRead)TTS.say('Tu nota es '+fmtN(nota)+'. '+(nota>=8?'Muy bien.':nota>=5?'Aprobado, pero repasa los fallos para subir nota.':'Suspenso. Repasa los fallos y repite.'))}
+const calif=n=>n<5?'Insuficiente':n<6?'Suficiente':n<7?'Bien':n<9?'Notable':'Sobresaliente';
+VIEWS.result=()=>{const s=subj(Qz.sid);const sc=quizScore(),n=Qz.nota;const exam=Qz.mode==='exam';
+ const emo=n>=9?'🏆':n>=8?'🌟':n>=5?'👍':'📚';const msg=exam?(n>=5?'✅ APROBADO':'❌ SUSPENSO'):n>=8?'Superado':n>=5?'Aprobado justo: repasa los fallos':'Suspenso: hay que repasar';
+ const fails=sc.tq.filter(r=>!r.ok).map(r=>{const{t}=getST(Qz.sid,r.temaId);const q=t&&findQ(t,r.qid);if(!q)return'';
+  return`<div class="rev ko"><b>${esc(q.enunciado)}</b><div class="why">❌ Pusiste «${esc(q.opciones[r.ans])}». ${esc(whyWrong(q,r.ans))}</div><div class="why">✅ Correcta: <b>«${esc(q.opciones[q.correcta])}»</b>. ${esc(q.explicacion)}</div></div>`}).join('');
+ const devs=sc.dq.map(r=>{const{t}=getST(Qz.sid,r.temaId);const d=t&&(t.dev||[]).find(x=>x.id===r.devId);if(!d)return'';
+  return`<div class="rev ${r.ok?'':'ko'}"><b>✍️ ${esc(d.enunciado)}</b> — nota <b>${fmtN(r.nota)}</b>${exam?`<details><summary>Ver corrección</summary>${devResHtml(r.res,d)}</details>`:(r.res.falta&&r.res.falta.length?'<div class="why">Te faltó: '+r.res.falta.map(esc).join(' · ')+'</div>':'')}</div>`}).join('');
+ const again=Qz.mode==='test'?`data-act="test" data-t="${Qz.tid}"`:`data-act="${Qz.mode}"`;const nf=sc.tq.filter(r=>!r.ok).length;
+ return`<main class="wrap center" style="--c:${s.color}"><div class="bigemo bounce">${emo}</div><div class="verd" style="color:${n>=5?'var(--ok)':'var(--ko)'}">${msg}</div>
+ <div class="nota">${fmtN(n)}</div><p class="score">${calif(n)}</p>
+ <p class="hint" style="font-size:18px">${sc.tot?`Test: ${sc.ok} de ${sc.tot} bien`:''}${sc.da!=null?` · Desarrollo: ${fmtN(sc.da)}`:''}${exam?'':' · Objetivo: 8 o más'}${sc.da!=null&&sc.tot?'<br>La nota pondera 70% test y 30% desarrollo.':''}</p>
+ <p style="font-size:22px">+${Qz.stars} ⭐</p>
+ ${fails?`<div class="card" style="text-align:left"><h3>🔍 Por qué has fallado</h3>${fails}</div>`:''}
+ ${devs?`<div class="card" style="text-align:left"><h3>✍️ Preguntas de desarrollo</h3>${devs}</div>`:''}
+ <div class="row">${nf?`<button class="btn big pri" data-act="redo">🔁 Repetir solo los ${nf} fallos</button>`:''}<button class="btn big ${nf?'':'pri'}" ${again}>🔄 Otro ${exam?'simulacro':'test'}</button><button class="btn big" data-act="home">🏠 Volver</button></div></main>`};
+A_DEV();
+function A_DEV(){setTimeout(()=>{
+A.devgo=async()=>{const ta=$('#devtxt');QS.text=ta?ta.value.trim():QS.text;TTS.stop();
+ if(QS.text.length<3){finishDev({nota:0,bien:[],falta:QS.d.puntos,errores:[],consejo:'En el examen escribe siempre algo: aunque sea la definición o las palabras clave que recuerdes ya suma puntos.',mejorada:''});return}
+ if(!S.settings.apiKey.trim()){QS.phase='self';repaintQ();return}
+ QS.phase='grading';repaintQ();const my=QS;
+ try{const s=subj(QS.ctx==='read'?R.sid:Qz.sid);const r=await gemini([{text:gradePrompt(s.name,QS.d,QS.text)}],8000);if(QS!==my)return;
+  const nota=clamp(parseFloat(String(r.nota).replace(',','.'))||0,0,10);finishDev({nota,bien:toArr(r.bien),falta:toArr(r.falta),errores:toArr(r.errores),consejo:String(r.consejo||''),mejorada:String(r.mejorada||'')})}
+ catch(e){if(QS!==my)return;toast('No se pudo corregir con IA ('+e.message+'). Corrígela tú con la respuesta modelo.',4000);QS.phase='self';repaintQ()}};
+A.devself=()=>{const p=QS.d.puntos;const k=QS.checks.filter(Boolean).length;finishDev({nota:10*k/p.length,bien:p.filter((_,i)=>QS.checks[i]),falta:p.filter((_,i)=>!QS.checks[i]),errores:[],consejo:'Compara tu respuesta con la modelo y apréndete las ideas que te han faltado: en el examen cuentan.',mejorada:'',self:true})};
+A.devchk=(d,el)=>{QS.checks[+d.i]=el.checked};
+A.devhint=()=>{const ta=$('#devtxt');if(ta)QS.text=ta.value;QS.hintShown=true;repaintQ()};
+A.devsay=()=>TTS.say(QS.d.modelo);
+},0)}
+VIEWS.break=()=>`<main class="wrap center"><h1>Pausa de 1 minuto ⏸️</h1><div class="bigemo bounce">${BRK.act[0]}</div><p style="font-size:26px;font-weight:700;line-height:1.4">${esc(BRK.act[1])}</p>
+ <div class="count" id="cd" style="--p:0"><span>${BRK.left}</span></div><button class="btn big go" id="brgo" data-act="brgo" disabled>Seguir ▶</button></main>`;
+
+/* ---------- historial ---------- */
+function backupBanner(){if(!S.subjects.some(s=>s.temas.length))return'';const d=S.lastBackup?Math.floor((Date.now()-S.lastBackup)/DAY):null;if(d!=null&&d<7)return'';
+ return`<div class="card noprint" style="border-color:#f0a020;background:#fffaf0"><b style="font-size:19px">💾 ${d==null?'Todavía no has guardado ninguna copia fuera del iPad':'Hace '+d+' días que no guardas copia'}</b><p class="hint">Todo se guarda solo en este iPad. Si se pierde, se rompe o se borran los datos de Safari, con la copia lo recuperas todo: temas, historial y progreso. Elige «Guardar en Archivos» → iCloud Drive (o mándatela por WhatsApp).</p><button class="btn pri" data-act="expAll">💾 Guardar copia ahora</button></div>`}
+const MODEN={test:'✏️ Test',exam:'🎓 Simulacro',fallos:'🔁 Fallos',today:'▶ Sesión de hoy',lectura:'📖 Lectura'};
+VIEWS.hist=()=>{const s=subj(view.sid);const hs=S.history.filter(h=>h.sid===s.id).slice().reverse();
+ return`<header class="top"><div class="inner"><button class="ico" data-act="home">←</button><div class="ttl">📚 Historial · ${s.emoji} ${esc(s.name)}</div></div></header><main class="wrap" style="--c:${s.color}">
+ <p class="hint">Todo lo que has hecho en esta asignatura. Toca un test o simulacro para volver a ver tus respuestas, los fallos explicados y las correcciones.</p>
+ ${hs.length?hs.map(h=>`<button class="opt" ${h.det?`data-act="histOpen" data-id="${h.id}"`:'disabled'} style="${h.det?'':'opacity:.75'}"><b style="flex:0 0 auto;width:auto;padding:0 10px;background:${h.nota==null?'#f3ecdc':h.nota>=5?'var(--okbg)':'var(--kobg)'}">${h.nota!=null?fmtN(h.nota):'✔'}</b><span><b>${MODEN[h.mode]||h.mode}</b>${h.tname?' · '+esc(h.tname):''}<br><span class="hint">${fdate(h.d)}${h.total?' · test '+h.ok+'/'+h.total:''}${h.det&&h.det.some(x=>x.dev)?' · con desarrollo':''}</span></span></button>`).join(''):'<div class="card"><p>Todavía no hay nada en el historial.</p></div>'}</main>`};
+function detHtml(det,all){return det.map(x=>{if(x.dev){const r=x.res||{};return`<div class="rev ${x.nota>=5?'':'ko'}"><b>✍️ ${esc(x.enunciado)}</b> — nota <b>${fmtN(x.nota||0)}</b><div class="why"><b>Tu respuesta:</b> ${esc(x.text)||'<i>(vacía)</i>'}</div>${ulist('❌ Faltó',r.falta)}${ulist('⚠️ Errores',r.errores)}${r.mejorada?`<details><summary>📝 Respuesta mejorada</summary><p class="model">${esc(r.mejorada)}</p></details>`:''}<details><summary>📄 Respuesta modelo</summary><p class="model">${esc(x.modelo)}</p></details></div>`}
+ if(x.ok&&!all)return'';return`<div class="rev ${x.ok?'':'ko'}"><b>${x.ok?'✅':'❌'} ${esc(x.enunciado)}</b>${x.tema?` <span class="hint">· ${esc(x.tema)}</span>`:''}${x.ok?`<div class="why">Respuesta: «${esc(x.opciones[x.correcta])}»${x.hint?' (con pista)':''}</div>`:`<div class="why">❌ Pusiste «${esc(x.opciones[x.ans])}». ${esc((x.porque||[])[x.ans]||'')}</div><div class="why">✅ Correcta: <b>«${esc(x.opciones[x.correcta])}»</b>. ${esc(x.explicacion)}</div>`}</div>`}).join('')}
+VIEWS.histItem=()=>{const h=S.history.find(x=>x.id===view.id);const s=subj(h.sid)||{color:'#2f6fd6'};const nk=h.det.filter(x=>!x.dev&&!x.ok).length;
+ return`<header class="top"><div class="inner"><button class="ico" data-act="hist" data-sid="${h.sid}">←</button><div class="ttl">${MODEN[h.mode]||''} · ${fdate(h.d)}</div></div></header><main class="wrap center" style="--c:${s.color}">
+ <div class="nota">${fmtN(h.nota||0)}</div><p class="score">${calif(h.nota||0)}${h.mode==='exam'?(h.nota>=5?' · ✅ Aprobado':' · ❌ Suspenso'):''}</p><p class="hint">${h.total?'Test: '+h.ok+' de '+h.total+' bien':''}${h.tname?' · '+esc(h.tname):''}</p>
+ <div class="card" style="text-align:left"><h3>Todas las preguntas</h3>${detHtml(h.det,true)}</div>
+ ${nk?`<button class="btn big pri" data-act="histRedo" data-id="${h.id}">🔁 Repetir las ${nk} que fallé</button>`:''}</main>`};
+/* ---------- zona adultos ---------- */
+VIEWS.adults=()=>{const tab=view.tab||'prog';const T={prog:'📊 Seguimiento',subs:'📚 Asignaturas',set:'⚙️ Ajustes',copy:'💾 Copias'};
+ return`<header class="top noprint"><div class="inner"><button class="ico" data-act="home">←</button><div class="ttl">Zona de familia y profesorado</div></div></header>
+ <main class="wrap"><div class="seg noprint">${Object.keys(T).map(k=>`<button class="${tab===k?'on':''}" data-act="atab" data-k="${k}">${T[k]}</button>`).join('')}</div>${({prog:aProg,subs:aSubs,set:aSet,copy:aCopy})[tab]()}</main>`};
+/* ---------- seguimiento de lectura ---------- */
+const RM={me:['#e8590c','🔊 Me lo lees'],tu:['#2f6fd6','🔁 Por turnos'],yo:['#1f9d55','👀 Leo yo']};
+function rkey(){const d=dstr(Date.now());const k=d+'|'+R.sid+'|'+R.tid;S.rlog=S.rlog||{};return S.rlog[k]||(S.rlog[k]={day:d,sid:R.sid,tid:R.tid,esc:0,tApp:0,tMine:0,yo:0,help:0,words:0,easy:0,orig:0,ms:0,frags:0,reread:0})}
+function rcount(kind){if(!R.sid)return;const x=rkey();x[kind]++;const f=curFrag();x[(R.easy&&f&&f.facil)?'easy':'orig']++;const now=Date.now();if(R.tick)x.ms+=Math.min(now-R.tick,90000);R.tick=now}
+function rmark(k){if(!R.sid)return;const x=rkey();x[k]=(x[k]||0)+1}
+const dayMs=s=>new Date(s+'T12:00:00').getTime();
+function readAgg(from,to,sid){const a={esc:0,tApp:0,tMine:0,yo:0,help:0,words:0,easy:0,orig:0,ms:0,frags:0,reread:0};
+ Object.values(S.rlog||{}).forEach(x=>{const t=dayMs(x.day);if(t>=from&&t<to&&(!sid||x.sid===sid))for(const k in a)a[k]+=x[k]||0});
+ a.total=a.esc+a.tApp+a.tMine+a.yo;a.me=a.total?a.esc/a.total:0;a.tu=a.total?(a.tApp+a.tMine)/a.total:0;a.yoP=a.total?a.yo/a.total:0;a.aut=a.total?(a.tMine+a.yo)/a.total:0;return a}
+const pc=x=>Math.round(100*x)+'%';
+function modeBar(a){if(!a.total)return'<p class="hint">Sin lecturas en este periodo.</p>';const seg=[['me',a.me],['tu',a.tu],['yo',a.yoP]].filter(x=>x[1]>0);
+ return`<div class="mbar3">${seg.map(([k,v])=>`<i style="flex:${v};background:${RM[k][0]}" title="${RM[k][1]}: ${pc(v)}">${v>=0.12?pc(v):''}</i>`).join('')}</div>
+ <div class="legend">${['me','tu','yo'].map(k=>`<span><i style="background:${RM[k][0]}"></i>${RM[k][1]} <b>${pc(k==='me'?a.me:k==='tu'?a.tu:a.yoP)}</b></span>`).join('')}</div>`}
+function weekStart(t){const d=new Date(t);d.setHours(0,0,0,0);const wd=(d.getDay()+6)%7;return d.getTime()-wd*DAY}
+function readCard(){const now=Date.now(),t0=weekStart(now)+7*DAY;
+ const a14=readAgg(now-14*DAY,now+DAY),p14=readAgg(now-28*DAY,now-14*DAY),all=readAgg(0,now+DAY);
+ if(!all.total)return`<div class="card"><h3>📖 Cómo lee</h3><p class="hint">Todavía no hay lecturas registradas. Aquí verás qué porcentaje de lectura hace la app por él (Me lo lees), cuánto lee por turnos y cuánto lee solo.</p></div>`;
+ const weeks=[];for(let i=7;i>=0;i--){const from=t0-(i+1)*7*DAY;weeks.push({from,a:readAgg(from,from+7*DAY)})}
+ const top=[['me',a14.me],['tu',a14.tu],['yo',a14.yoP]].sort((x,y)=>y[1]-x[1])[0];const diff=Math.round(100*(a14.aut-p14.aut));
+ const trend=!p14.total||!a14.total?'':diff>=5?`📈 <b>Va ganando autonomía</b>: lee él mismo un ${pc(a14.aut)} de las frases (${diff>0?'+':''}${diff} puntos respecto a las 2 semanas anteriores).`:diff<=-5?`📉 <b>Está pidiendo más ayuda</b>: lee él mismo un ${pc(a14.aut)} de las frases (${diff} puntos respecto a las 2 semanas anteriores).`:`➡️ <b>Estable</b>: lee él mismo un ${pc(a14.aut)} de las frases.`;
+ const own=a14.tMine+a14.yo,hp=own?Math.round(100*a14.help/own):0;
+ const tip=!a14.total?'':a14.me>=0.6?'💡 Casi siempre le lee la app. Probad a dejar «Por turnos» como modo por defecto (Ajustes → Lectura).':a14.tu>=0.5&&hp<15?'💡 Se defiende bien por turnos y pide poca ayuda: puede empezar a probar «Leo yo» en algunas partes.':a14.yoP>=0.5&&hp>30?'💡 Lee solo pero pide mucha ayuda: quizá le conviene volver a «Por turnos» en los temas difíciles.':a14.yoP>=0.5?'💡 Ya lee mayoritariamente solo. Para el examen, que lea también el «Texto del cole» y no solo el adaptado.':'';
+ const mx=Math.max(1,...weeks.map(w=>w.a.total));
+ return`<div class="card"><h3>📖 Cómo lee</h3>
+ <p><b>Últimos 14 días</b> · ${a14.total} frases leídas · va tirando sobre todo por <b style="color:${RM[top[0]][0]}">${RM[top[0]][1]}</b> (${pc(top[1])})</p>${modeBar(a14)}
+ ${trend?`<p style="margin-top:12px">${trend}</p>`:''}${tip?`<p class="tipbox">${tip}</p>`:''}
+ <div class="kpis" style="margin-top:12px"><div class="kpi"><b>${pc(a14.aut)}</b><span>frases que lee él (turnos + solo)</span></div><div class="kpi"><b>${hp}</b><span>ayudas de voz por cada 100 frases suyas</span></div><div class="kpi"><b>${a14.words}</b><span>palabras consultadas</span></div><div class="kpi"><b>${a14.easy+a14.orig?pc(a14.orig/(a14.easy+a14.orig)):'—'}</b><span>leído en «Texto del cole» (resto adaptado)</span></div><div class="kpi"><b>${a14.reread}</b><span>relecturas por fallar la pregunta rápida</span></div><div class="kpi"><b>${Math.round(a14.ms/60000)}</b><span>min de lectura</span></div></div>
+ <h3 style="margin-top:18px">Evolución por semanas</h3><p class="hint">Cada barra es una semana: proporción de frases en cada modo. Arriba, % que lee él.</p>
+ <div class="wk">${weeks.map(w=>{const a=w.a,h=a.total?Math.max(14,Math.round(120*a.total/mx)):0;const lab=new Date(w.from).toLocaleDateString('es-ES',{day:'numeric',month:'short'});
+  return`<div class="wcol" title="Semana del ${lab}: ${a.total} frases · Me lo lees ${pc(a.me)} · Turnos ${pc(a.tu)} · Solo ${pc(a.yoP)}"><span class="wtop">${a.total?pc(a.aut):''}</span><div class="wbar" style="height:${h}px">${a.total?[['yo',a.yoP],['tu',a.tu],['me',a.me]].filter(x=>x[1]>0).map(([k,v])=>`<i style="flex:${v};background:${RM[k][0]}"></i>`).join(''):''}</div><span class="wlab">${lab}</span></div>`}).join('')}</div>
+ <p class="hint" style="margin-top:10px">Desde el principio: ${all.total} frases · Me lo lees ${pc(all.me)} · Por turnos ${pc(all.tu)} · Leo yo ${pc(all.yoP)}</p></div>`}
+function dayMinutes(ds){let ms=0;Object.values(S.rlog||{}).forEach(x=>{if(x.day===ds)ms+=x.ms||0});S.history.forEach(h=>{if(dstr(h.d)===ds)ms+=(h.secs||0)*1000});return Math.round(ms/60000)}
+function calCard(){const days=[];for(let i=27;i>=0;i--)days.push(dstr(Date.now()-i*DAY));const lv=m=>m<=0?0:m<15?1:m<30?2:3;const col=['#ece4d3','#b9d3f5','#6f9ee8','#2f6fd6'];const act=days.filter(d=>dayMinutes(d)>0).length;
+ return`<div class="card"><h3>📆 Constancia (últimos 28 días)</h3><p class="hint">${act} días con actividad de 28.</p><div class="cal">${days.map(d=>{const m=dayMinutes(d);return`<i style="background:${col[lv(m)]}" title="${new Date(d+'T12:00').toLocaleDateString('es-ES',{weekday:'short',day:'numeric',month:'short'})}: ${m} min"></i>`}).join('')}</div>
+ <div class="legend"><span><i style="background:${col[0]}"></i>Sin actividad</span><span><i style="background:${col[1]}"></i>&lt; 15 min</span><span><i style="background:${col[2]}"></i>15–30 min</span><span><i style="background:${col[3]}"></i>&gt; 30 min</span></div></div>`}
+function actCard(){const out=[];for(let i=0;i<14;i++){const ds=dstr(Date.now()-i*DAY);const items=[];
+  Object.values(S.rlog||{}).filter(x=>x.day===ds).forEach(x=>{const s=subj(x.sid),t=s&&s.temas.find(y=>y.id===x.tid);const a=readAgg(dayMs(ds)-1,dayMs(ds)+1,x.sid);const tot=x.esc+x.tApp+x.tMine+x.yo;if(!tot)return;
+   items.push(`<div class="act"><span>📖</span><div><b>Lectura</b> · ${s?s.emoji+' '+esc(s.name):''}${t?' · '+esc(t.title):''}<br><span class="hint">${tot} frases · ${RM.me[1]} ${pc(x.esc/tot)} · ${RM.tu[1]} ${pc((x.tApp+x.tMine)/tot)} · ${RM.yo[1]} ${pc(x.yo/tot)}${x.help?' · '+x.help+' ayudas de voz':''}${x.words?' · '+x.words+' palabras consultadas':''}${x.reread?' · '+x.reread+' relecturas':''}${x.frags?' · '+x.frags+' partes terminadas':''}</span></div></div>`)});
+  S.history.filter(h=>dstr(h.d)===ds&&h.mode!=='lectura').forEach(h=>{const s=subj(h.sid);const dv=(h.det||[]).filter(x=>x.dev);const hints=(h.det||[]).filter(x=>x.hint).length;
+   items.push(`<div class="act" ${h.det?`data-act="histOpen" data-id="${h.id}" style="cursor:pointer"`:''}><span>${(MODEN[h.mode]||'').split(' ')[0]}</span><div><b>${(MODEN[h.mode]||h.mode).replace(/^\S+\s/,'')}</b> · ${s?s.emoji+' '+esc(s.name):esc(h.sname||'')}${h.tname?' · '+esc(h.tname):''} — <b style="color:${h.nota>=5?'var(--ok)':'var(--ko)'}">${h.nota!=null?fmtN(h.nota):''}</b><br><span class="hint">${new Date(h.d).toLocaleTimeString('es-ES',{hour:'2-digit',minute:'2-digit'})} · ${Math.max(1,Math.round((h.secs||0)/60))} min${h.total?' · test '+h.ok+'/'+h.total:''}${hints?' · '+hints+' con pista':''}${dv.length?' · desarrollo '+dv.map(x=>fmtN(x.nota||0)).join(', '):''}${h.det?' · toca para ver':''}</span></div></div>`)});
+  const m=dayMinutes(ds);const lab=new Date(ds+'T12:00').toLocaleDateString('es-ES',{weekday:'long',day:'numeric',month:'long'});const labC=lab.charAt(0).toUpperCase()+lab.slice(1);
+  out.push(`<div class="day"><div class="dayh"><b>${labC}</b><span>${items.length?m+' min':''}</span></div>${items.join('')||'<div class="hint" style="padding:4px 0 8px">— Sin actividad</div>'}</div>`)}
+ return`<div class="card"><h3>📅 Seguimiento de actividades (últimos 14 días)</h3>${out.join('')}</div>`}
+function aProg(){const now=Date.now();const h7=S.history.filter(h=>h.d>now-7*DAY),h30=S.history.filter(h=>h.d>now-30*DAY&&h.total);const ok30=h30.reduce((a,h)=>a+h.ok,0),t30=h30.reduce((a,h)=>a+h.total,0);
+ const hard=[];S.subjects.forEach(s=>s.temas.forEach(t=>t.questions.forEach(q=>{const x=st(q.id);if(x&&x.fail)hard.push({s,t,q,x})})));hard.sort((a,b)=>b.x.fail-a.x.fail||a.x.box-b.x.box);
+ return`<div class="card"><div class="row between"><h2 style="margin:0">Informe de ${esc(S.profile.name)}</h2><button class="btn sm noprint" data-act="print">🖨️ Imprimir / PDF</button></div><p class="hint">Generado el ${new Date().toLocaleDateString('es-ES',{dateStyle:'long'})}</p>
+ <div class="kpis"><div class="kpi"><b>${Math.round(h7.reduce((a,h)=>a+h.secs,0)/60)}</b><span>min de test esta semana</span></div><div class="kpi"><b>${h7.filter(h=>h.total).length}</b><span>tests esta semana</span></div>
+ <div class="kpi"><b>${t30?Math.round(100*ok30/t30)+'%':'—'}</b><span>aciertos (30 días)</span></div><div class="kpi"><b>🔥 ${streakNow()}</b><span>días seguidos</span></div><div class="kpi"><b>⭐ ${S.stars}</b><span>estrellas</span></div></div></div>
+ ${readCard()}${calCard()}${actCard()}
+ ${S.subjects.map(s=>{const hs=h30.filter(h=>h.sid===s.id);const o=hs.reduce((a,h)=>a+h.ok,0),tt=hs.reduce((a,h)=>a+h.total,0);
+  const p=subjPrep(s),ps=prepState(p),dt=daysTo(s.examDate),sims=S.history.filter(h=>h.sid===s.id&&h.mode==='exam'&&h.nota!=null).slice(-5);
+  return`<div class="card" style="--c:${s.color}"><h3>${s.emoji} ${esc(s.name)} <span class="hint">· ${hs.length} tests · ${tt?Math.round(100*o/tt)+'% aciertos':'sin tests aún'}</span></h3>
+  <div class="pbar"><i style="width:${p}%;background:${ps[0]}"></i><span>${p}%</span></div><p><b style="color:${ps[0]}">${ps[1]}</b>${dt!=null?' · 📅 examen '+(dt>0?'en '+dt+' días':dt===0?'hoy':'pasado'):''}${sims.length?' · Simulacros: '+sims.map(h=>fmtN(h.nota)).join(' → '):' · Sin simulacros'}</p>
+  ${s.temas.length?`<table class="tbl"><tr><th>Tema</th><th>Leído</th><th>Preparación</th><th>Desarrollo</th><th>Fallos pend.</th></tr>${s.temas.map(t=>{const rd=new Set(t.readFrags).size,m=mastery(t);const fp=t.questions.filter(q=>{const x=st(q.id);return x&&x.fail&&x.box<3}).length;const tp=temaPrep(t),da=devAvg(t);
+   return`<tr><td>${esc(t.title)}</td><td>${rd}/${t.frags.length}</td><td style="min-width:120px">${tp}%<div class="mbar"><i style="width:${tp}%"></i></div></td><td>${da==null?'—':fmtN(da)}</td><td>${fp}</td></tr>`}).join('')}</table>`:'<p class="hint">Sin temas</p>'}</div>`}).join('')}
+ <div class="card"><h3>🧩 Preguntas que más le cuestan</h3>${hard.slice(0,10).map(h=>`<div class="rev ko"><b>${esc(h.q.enunciado)}</b><br>Correcta: ${esc(h.q.opciones[h.q.correcta])} <span class="hint">· ${h.s.emoji} ${esc(h.t.title)} · falló ${h.x.fail} ${h.x.fail>1?'veces':'vez'}${h.x.box>=3?' · ya la domina':''}</span></div>`).join('')||'<p class="hint">Todavía no hay fallos registrados.</p>'}</div>
+ <div class="card"><h3>🕒 Últimas sesiones</h3><table class="tbl"><tr><th>Fecha</th><th>Asignatura</th><th>Actividad</th><th>Resultado</th></tr>${S.history.slice(-20).reverse().map(h=>{const s=subj(h.sid);const t=s&&h.tid&&s.temas.find(x=>x.id===h.tid);
+  return`<tr><td>${fdate(h.d)}</td><td>${s?s.emoji+' '+esc(s.name):'—'}</td><td>${{test:'Test',exam:'Simulacro',fallos:'Fallos',lectura:'Lectura',today:'Sesión de hoy'}[h.mode]||h.mode}${t?' · '+esc(t.title):''}</td><td>${h.nota!=null?'<b>'+fmtN(h.nota)+'</b> ':''}${h.total?'('+h.ok+'/'+h.total+')':h.nota!=null?'':'✔'}</td></tr>`}).join('')||'<tr><td colspan="4" class="hint">Sin sesiones</td></tr>'}</table></div>`}
+function aSubs(){return S.subjects.map(s=>`<div class="card" style="border-left:8px solid ${s.color}"><div class="row between"><h3 style="margin:0">${s.emoji} ${esc(s.name)}</h3><div class="row"><button class="btn sm" data-act="sRen" data-id="${s.id}">✏️ Nombre</button><button class="btn sm" data-act="sIcon" data-id="${s.id}">🎨 Icono</button><button class="btn sm warn" data-act="sDel" data-id="${s.id}">🗑️</button></div></div>
+ ${s.temas.map(t=>`<div class="trow"><div class="tt">${esc(t.title)}<div class="hint" style="font-weight:400">${t.frags.length} partes · ${t.questions.length} preguntas · ${(t.dev||[]).length} de desarrollo · ${t.ai?'✨ IA':'🧩 automáticas'}${t.glos&&t.glos.length?' · '+t.glos.length+' palabras en glosario':''}</div></div>
+ <button class="btn sm" data-act="tQs" data-s="${s.id}" data-t="${t.id}">👁 Preguntas</button><button class="btn sm" data-act="tRen" data-s="${s.id}" data-t="${t.id}">✏️</button><button class="btn sm" data-act="tRegen" data-s="${s.id}" data-t="${t.id}">✨ Rehacer</button><button class="btn sm warn" data-act="tDel" data-s="${s.id}" data-t="${t.id}">🗑️</button></div>`).join('')||'<p class="hint">Sin temas</p>'}</div>`).join('')||'<div class="card"><p>No hay asignaturas todavía.</p></div>'}
+function aSet(){const s=S.settings;const vs=TTS.voices;const opt=(k,o)=>Object.keys(o).map(v=>`<option value="${v}" ${String(s[k])===String(v)?'selected':''}>${o[v]}</option>`).join('');
+ return`<div class="card"><h3>👦 Alumno</h3>
+ <div class="set"><div><b>Nombre</b></div><input type="text" value="${esc(S.profile.name)}" data-chg="setName"></div>
+ <div class="set"><div><b>Código de adultos</b><div class="hint">4 números. Vacío = sin código.</div></div><input type="tel" maxlength="4" inputmode="numeric" value="${esc(s.pin)}" data-set="pin"></div></div>
+ <div class="card"><h3>📖 Lectura</h3>
+ <div class="set"><div><b>Tipo de letra</b><div class="hint">Atkinson Hyperlegible está diseñada para leer con facilidad.</div></div><select data-set="font">${opt('font',{atkinson:'Atkinson Hyperlegible',lexend:'Lexend',sistema:'La del iPad'})}</select></div>
+ <div class="set"><div><b>Tamaño de letra: <span id="fsv">${s.fs}</span> px</b></div><input type="range" min="16" max="40" step="1" value="${s.fs}" data-set="fs" data-num="1"></div>
+ <div class="set"><div><b>Espacio entre líneas</b></div><select data-set="lh" data-num="1">${opt('lh',{'1.6':'Normal','1.9':'Amplio','2.2':'Muy amplio'})}</select></div>
+ <div class="set"><div><b>Color de fondo</b><div class="hint">A muchos alumnos les cansa menos un fondo crema o azul.</div></div><select data-set="bg">${opt('bg',{crema:'Crema',blanco:'Blanco',azul:'Azul suave',verde:'Verde suave'})}</select></div>
+ <div class="set"><div><b>Modo de lectura por defecto</b></div><select data-set="readMode">${opt('readMode',{escucho:'Me lo lees',turnos:'Por turnos',yo:'Leo yo'})}</select></div></div>
+ <div class="card"><h3>🔊 Voz</h3>
+ <div class="set"><div><b>Voz</b>${vs.length?'':'<div class="hint">No se han encontrado voces en español en este dispositivo.</div>'}</div><select data-set="voiceURI"><option value="">Automática</option>${vs.map(v=>`<option value="${esc(v.voiceURI)}" ${s.voiceURI===v.voiceURI?'selected':''}>${esc(v.name)} (${esc(v.lang)})</option>`).join('')}</select></div>
+ <div class="set"><div><b>Velocidad: <span id="ratev">${s.rate}</span></b><div class="hint">0,8–0,9 suele ir bien para seguir el texto.</div></div><input type="range" min="0.6" max="1.2" step="0.05" value="${s.rate}" data-set="rate" data-num="1"></div>
+ <div class="set"><div><b>Leer en voz alta las preguntas</b></div><input type="checkbox" class="sw" data-set="autoRead" ${s.autoRead?'checked':''}></div>
+ <div class="set"><div><b>Sonidos</b></div><input type="checkbox" class="sw" data-set="sound" ${s.sound?'checked':''}></div>
+ <div class="set"><div></div><button class="btn sm" data-act="vtest">▶ Probar la voz</button></div></div>
+ <div class="card"><h3>✏️ Tests y pausas</h3>
+ <div class="set"><div><b>Preguntas por test</b><div class="hint">Sesiones cortas = más atención. Recomendado 8.</div></div><select data-set="sessionLen" data-num="1">${opt('sessionLen',{4:'4',5:'5',6:'6',8:'8',10:'10'})}</select></div>
+ <div class="set"><div><b>Permitir pistas en los tests</b><div class="hint">Una pregunta acertada con pista no cuenta para «dominada»: tendrá que acertarla sin ayuda.</div></div><input type="checkbox" class="sw" data-set="hints" ${s.hints?'checked':''}></div>
+ <div class="set"><div><b>Comprobar en dos pasos</b><div class="hint">Elige y luego pulsa «Comprobar». Ayuda a frenar respuestas impulsivas.</div></div><input type="checkbox" class="sw" data-set="twoStep" ${s.twoStep?'checked':''}></div>
+ <div class="set"><div><b>Pausa de movimiento cada…</b><div class="hint">Al acabar una pregunta o una parte, propone 1 minuto de movimiento.</div></div><select data-set="breakMin" data-num="1">${opt('breakMin',{0:'Sin pausas',8:'8 minutos',10:'10 minutos',12:'12 minutos',15:'15 minutos',20:'20 minutos'})}</select></div></div>
+ <div class="card"><h3>✨ Inteligencia artificial (Google Gemini)</h3><p class="hint">Gratis. Con ella la app crea la <b>lectura adaptada</b>, el <b>glosario</b>, preguntas a nivel de examen que <b>explican cada error</b>, <b>preguntas de desarrollo</b> y su <b>corrección</b>, y puede leer <b>fotos</b> y PDF escaneados. </p><p><a class="btn pri" href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">🔑 Conseguir la clave gratis (Google AI Studio)</a></p><p class="hint">Entra con una cuenta de Google de un adulto → «Create API key» → copia la clave (empieza por AIza…) y pégala aquí abajo.</p>
+ <div class="set"><div><b>Clave de Gemini</b></div><input type="password" value="${esc(s.apiKey)}" data-set="apiKey" placeholder="AIza..." autocomplete="off"></div>
+ <div class="set"><div><b>Modelo</b><div class="hint">Déjalo como está salvo que Google lo cambie.</div></div><input type="text" value="${esc(s.model)}" data-set="model"></div>
+ <div class="set"><div id="gstat" class="hint"></div><button class="btn sm" data-act="gtest">🧪 Probar la clave</button></div>
+ <p class="hint">Al preparar un tema se envía el texto del temario a Google. No metas datos personales en los PDF.</p></div>`}
+function aCopy(){return`<div class="card"><h3>🛡️ Protección de datos de este iPad</h3><div id="persist" class="hint">Comprobando…</div>
+ <p class="hint">Última copia fuera del iPad: <b>${S.lastBackup?fdate(S.lastBackup):'nunca'}</b>. La app recuerda hacerla cada 7 días.</p></div>
+ <div class="card"><h3>🕒 Versiones guardadas automáticamente</h3><p class="hint">La app guarda sola una versión cada día y antes de cualquier acción delicada (borrar, cargar copia, rehacer tema). Se guardan las últimas 14.</p><div id="snaps" class="hint">Cargando…</div></div>
+ <div class="card"><h3>🗑️ Papelera</h3><p class="hint">Lo que se borra no desaparece: queda aquí y se puede recuperar.</p>${(S.trash||[]).length?S.trash.map((x,i)=>`<div class="trow"><div class="tt">${x.type==='subj'?'📚 Asignatura':'📄 Tema'}: ${esc(x.type==='subj'?x.item.name:x.item.title)}<div class="hint" style="font-weight:400">${x.type==='tema'?esc(x.sname)+' · ':''}borrado el ${fdate(x.d)}</div></div><button class="btn sm" data-act="trRes" data-i="${i}">↩️ Recuperar</button><button class="btn sm warn" data-act="trDel" data-i="${i}">Eliminar para siempre</button></div>`).join(''):'<p>La papelera está vacía.</p>'}</div>
+ <div class="card"><h3>🤝 Compartir temas (sin progreso)</h3><p class="hint">Para pasar los temas preparados a otro iPad (otro alumno, el profe…). Se envía un archivo que se abre desde «Cargar archivo».</p><button class="btn" data-act="expTemas">📤 Compartir temas</button></div>
+ <div class="card"><h3>💾 Copia de seguridad completa</h3><p class="hint">Guarda temas, progreso, estrellas y ajustes. Hazla de vez en cuando: si se borran los datos de Safari se perdería todo.</p><button class="btn" data-act="expAll">📤 Hacer copia</button></div>
+ <div class="card"><h3>📥 Cargar archivo</h3><p class="hint">Abre una copia de seguridad (sustituye todo) o un archivo de temas compartidos (se añaden).</p><label class="btn">📂 Elegir archivo<input type="file" class="vh" accept=".json,application/json" data-chg="impFile"></label></div>
+ <div class="card"><h3>🧹 Empezar de cero</h3><p class="hint">Borra todo lo de este iPad.</p><button class="btn warn" data-act="wipe">🗑️ Borrar todo</button></div>`}
+
+/* ================== acciones ================== */
+let LOGN=0;
+function makeLog(ul){return(msg,id,state)=>{const ex=id&&id!=='run'&&document.getElementById(id);
+ if(ex){ex.className=state==='err'?'err':'ok';ex.innerHTML=(state==='err'?'❌ ':'✅ ')+esc(msg);return id}
+ const li=document.createElement('li');li.id='lg'+(++LOGN);const err=state==='err';li.className=err?'err':'run';li.innerHTML=(err?'⚠️ ':'<span class="spin"></span> ')+esc(msg);ul.appendChild(li);try{li.scrollIntoView({block:'nearest'})}catch(e){}return li.id}}
+const A={};
+A.mclose=()=>{TTS.stop();closeModal()};
+A.mok=()=>{const f=MCB.ok;const v={};document.querySelectorAll('#modal input').forEach(i=>v[i.id]=i.value.trim());closeModal();f&&f(v)};
+A.msay=()=>TTS.say(MCB.sent||'');
+A.home=()=>{TTS.stop();actStop();go('home')};
+A.pin=d=>{if(d.d==='✖'){closeModal();return}if(d.d==='⌫')PIN.buf=PIN.buf.slice(0,-1);else if(PIN.buf.length<4)PIN.buf+=d.d;
+ document.querySelectorAll('#pd i').forEach((el,i)=>el.classList.toggle('f',i<PIN.buf.length));
+ if(PIN.buf.length===4){if(PIN.buf===S.settings.pin){closeModal();PIN.cb()}else{toast('Código incorrecto');PIN.buf='';setTimeout(()=>document.querySelectorAll('#pd i').forEach(el=>el.classList.remove('f')),300)}}};
+A.suAv=(d,el)=>{S.profile.avatar=d.e;document.querySelectorAll('.av').forEach(b=>b.classList.toggle('on',b===el))};
+A.suGo=()=>{const n=$('#su-name').value.trim(),p=$('#su-pin').value.trim();if(!n){toast('Escribe tu nombre 🙂');return}if(p&&!/^\d{4}$/.test(p)){toast('El código tiene que ser de 4 números');return}
+ S.profile.name=n;S.settings.pin=p;S.setup=true;save();go('home');TTS.say('Hola, '+n+'. Vamos a por esos exámenes.')};
+A.tab=d=>{S.activeSubject=d.id;save();render()};
+A.addSubject=()=>{MCB.emo=SUBJ_EMOJI[S.subjects.length%SUBJ_EMOJI.length];MCB.ok=v=>{const n=v['ms-name'];if(!n)return;const s={id:uid(),name:n,emoji:MCB.emo,color:COLORS[S.subjects.length%COLORS.length],temas:[]};S.subjects.push(s);S.activeSubject=s.id;save();render()};
+ modal(`<h2>Nueva asignatura</h2><input id="ms-name" class="inp" placeholder="Ej: Biología y Geología" autocomplete="off"><label class="lb">Icono</label><div class="avs">${SUBJ_EMOJI.map(e=>`<button class="av ${e===MCB.emo?'on':''}" data-act="msEmo" data-e="${e}">${e}</button>`).join('')}</div><div class="row" style="margin-top:16px"><button class="btn" data-act="mclose">Cancelar</button><button class="btn pri" data-act="mok">Añadir</button></div>`);setTimeout(()=>{const i=$('#ms-name');i&&i.focus()},50)};
+A.msEmo=(d,el)=>{MCB.emo=d.e;document.querySelectorAll('#modal .av').forEach(b=>b.classList.toggle('on',b===el))};
+A.addTema=()=>{PEND=[];go('addTema',{sid:S.activeSubject})};
+A.atDel=d=>{PEND.splice(+d.i,1);paintFiles()};
+A.atGo=async()=>{const s=subj(view.sid);const pasted=($('#at-text')||{}).value||'';if(!PEND.length&&pasted.trim().length<80){toast('Elige un PDF, haz fotos o pega el texto');return}
+ const title=$('#at-title').value.trim()||(PEND[0]?PEND[0].name.replace(/\.[^.]+$/,'').replace(/[_-]+/g,' '):'');const btn=$('#at-go');btn.disabled=true;btn.innerHTML='<span class="spin"></span> Preparando…';
+ const prog=$('#at-prog');prog.innerHTML='';const log=makeLog(prog);
+ try{const t=await buildTema({files:PEND,pasted:pasted.trim(),title,s,log});s.temas.push(t);PEND=[];save(true);
+  const li=document.createElement('li');li.className='ok';li.innerHTML=`🎉 <b>¡Tema listo!</b> ${t.frags.length} partes · ${t.questions.length} preguntas${t.glos.length?' · '+t.glos.length+' palabras en el glosario':''}`;prog.appendChild(li);
+  btn.outerHTML=`<div class="row"><button class="btn big pri" data-act="read" data-t="${t.id}">📖 Empezar a leer</button><button class="btn big" data-act="home">🏠 Volver</button></div>`;beep(true)}
+ catch(e){const li=document.createElement('li');li.className='err';li.textContent='❌ '+e.message;prog.appendChild(li);btn.disabled=false;btn.textContent='✨ Intentar otra vez'}};
+A.read=d=>{startRead(S.activeSubject,d.t)};
+A.test=d=>startQuiz('test',d.t);
+A.exam=()=>startQuiz('exam');
+A.today=()=>startQuiz('today');
+A.redo=()=>{const items=Qz.results.filter(r=>!r.retry&&!r.ok&&!r.dev).map(r=>({temaId:r.temaId,qid:r.qid}));startQuiz('fallos',null,shuffle(items))};
+A.examDate=()=>{const s=subj(S.activeSubject);MCB.ok=v=>{s.examDate=v.md||'';save();render()};modal(`<h2>📅 Fecha del examen de ${esc(s.name)}</h2><input id="md" type="date" class="inp" value="${esc(s.examDate||'')}"><p class="hint">Sirve para ver la cuenta atrás y saber si vas a tiempo. Bórrala para quitarla.</p><div class="row"><button class="btn" data-act="mclose">Cancelar</button><button class="btn pri" data-act="mok">Guardar</button></div>`)};
+A.fallos=()=>startQuiz('fallos');
+A.exitRead=()=>{stopReading();actStop();save();go('home')};
+A.fs=d=>{S.settings.fs=clamp(S.settings.fs+(+d.d),16,40);applyTheme();save()};
+A.rmode=d=>{stopReading();R.mode=d.m;S.settings.readMode=d.m;save();render()};
+A.reasy=d=>{stopReading();R.easy=d.v==='1';prepFrag();render()};
+A.rplay=()=>{if(!R.tick||Date.now()-R.tick>90000)R.tick=Date.now();readLoop()};
+A.rpause=()=>{stopReading();paintRead()};
+A.rrestart=()=>{stopReading();R.si=0;readLoop()};
+A.rsay=()=>{rmark('help');save();TTS.say(R.sents[R.si]||'')};
+A.rmine=()=>{TTS.stop();rcount('tMine');R.si++;if(R.si>=R.sents.length)finishFrag();else readLoop()};
+A.rnext=()=>{TTS.stop();rcount('yo');R.si++;if(R.si>=R.sents.length)finishFrag();else paintRead()};
+A.ragain=()=>{stopReading();R.si=0;R.finished=false;R.qPhase=false;window.scrollTo({top:0,behavior:'smooth'});paintRead()};
+A.rfrag=d=>goFrag(R.fi+(+d.d));
+A.word=(d,el)=>{if(view.name==='read')rmark('words');if(view.name==='read'&&R.playing){stopReading();paintRead()}const{t}=getST(R.sid,R.tid);const g=t?glosFind(glosMap(t),d.w):null;const s=el.closest('.s');MCB.si=s?+s.dataset.si:null;MCB.sent=d.w;
+ modal(`<div class="wordbig">${esc(d.w)}</div>${g?`<p style="font-size:21px;line-height:1.5;text-align:center">📘 ${esc(g.d)}</p>`:''}<div class="row" style="margin-top:12px"><button class="btn" data-act="wsay">🔊 Escuchar</button>${view.name==='read'?'<button class="btn" data-act="wfrom">📍 Seguir desde aquí</button>':''}<button class="btn pri" data-act="mclose">Vale</button></div>`);
+ TTS.say(d.w+(g?'. '+g.d:''),0.8)};
+A.wsay=()=>TTS.say(MCB.sent,0.7);
+A.wfrom=()=>{closeModal();if(MCB.si==null)return;stopReading();R.si=MCB.si;R.finished=false;R.qPhase=false;paintRead()};
+A.qsel=d=>{if(QS.checked)return;QS.sel=+d.k;if(!S.settings.twoStep&&QS.ctx!=='exam'){checkQ();return}repaintQ();if(S.settings.autoRead)TTS.say(QS.q.opciones[QS.order[QS.sel]])};
+A.qcheck=()=>checkQ();
+A.qspeak=()=>speakQ();
+A.qhint=()=>{if(QS.dev)return;QS.hint=true;const{t}=getST(QS.ctx==='read'?R.sid:Qz.sid,QS.temaId);showWhere(QS.q,t,'💡 Pista: busca aquí')};
+A.qwhere=()=>{const{t}=getST(QS.ctx==='read'?R.sid:Qz.sid,QS.temaId);showWhere(QS.q,t,'📖 Aquí lo dice')};
+A.qretry=()=>{rmark('reread');const{t}=getST(R.sid,QS.temaId);QS.elim.push(QS.sel);QS.sel=null;QS.checked=false;QS.ok=null;paintRead();showWhere(QS.q,t,'📖 Vuelve a leer la frase marcada')};
+A.qnext=()=>{TTS.stop();if(QS.ctx==='read'){R.qPhase=false;goFrag(R.fi+1)}else quizNext()};
+A.exitQuiz=()=>confirmBox('Si sales ahora, este test no se termina. Las estrellas que llevas se quedan.','Salir',()=>{TTS.stop();actStop();save();go('home')});
+A.brgo=()=>{clearInterval(BRK.timer);ACT.acc=0;ACT.start=null;TTS.stop();const n=BRK.next;BRK.next=null;n&&n()};
+A.profile=()=>{const lv=level();modal(`<h2 class="center">${S.profile.avatar} ${esc(S.profile.name)}</h2><p class="center hint">Nivel ${lv} · ${LEVELS[Math.min(lv-1,LEVELS.length-1)]} · ⭐ ${S.stars} · faltan ${STARS_LV-S.stars%STARS_LV} ⭐ para el siguiente nivel</p>
+ <h3>Elige personaje</h3><div class="avs">${AVATARS.map(a=>`<button class="av ${a[0]===S.profile.avatar?'on':''} ${a[1]>lv?'lock':''}" data-act="pAv" data-e="${a[0]}" data-l="${a[1]}">${a[0]}${a[1]>lv?`<small>Nv ${a[1]}</small>`:''}</button>`).join('')}</div>
+ <h3>Mis medallas</h3><div class="avs">${Object.keys(BADGES).map(k=>`<div class="av ${S.badges.includes(k)?'':'lock'}" title="${BADGES[k][1]}" style="display:grid;place-items:center">${BADGES[k][0]}</div>`).join('')}</div>
+ <p class="hint">${Object.keys(BADGES).map(k=>(S.badges.includes(k)?'✅ ':'⬜ ')+BADGES[k][1]).join(' · ')}</p><button class="btn big pri" data-act="mclose">Cerrar</button>`)};
+A.pAv=d=>{if(+d.l>level()){toast('🔒 Se desbloquea en el nivel '+d.l);return}S.profile.avatar=d.e;save();closeModal();render()};
+A.adults=()=>askPin(()=>go('adults',{tab:'prog'}));
+A.atab=d=>go('adults',{tab:d.k});
+A.print=()=>window.print();
+A.vtest=()=>TTS.say('Hola '+(S.profile.name||'')+'. Así sueno cuando te leo el tema.');
+A.gtest=async()=>{const el=$('#gstat');el.innerHTML='<span class="spin"></span> Probando…';try{await gemini([{text:'Devuelve exactamente este JSON: {"ok":true}'}],2000);el.innerHTML='✅ La clave funciona'}catch(e){el.textContent='❌ '+e.message}};
+A.sRen=d=>{const s=subj(d.id);promptBox('Nombre de la asignatura',s.name,v=>{if(v){s.name=v;save();render()}})};
+A.sIcon=d=>{const s=subj(d.id);MCB.sid=d.id;modal(`<h2>Icono de ${esc(s.name)}</h2><div class="avs">${SUBJ_EMOJI.map(e=>`<button class="av ${e===s.emoji?'on':''}" data-act="sIconSet" data-e="${e}">${e}</button>`).join('')}</div><h3>Color</h3><div class="avs">${COLORS.map(c=>`<button class="av" style="background:${c};${c===s.color?'outline:4px solid #222':''}" data-act="sColSet" data-c="${c}"></button>`).join('')}</div><button class="btn big" data-act="mclose" style="margin-top:14px">Listo</button>`)};
+A.sIconSet=d=>{subj(MCB.sid).emoji=d.e;save();render();A.sIcon({id:MCB.sid})};
+A.sColSet=d=>{subj(MCB.sid).color=d.c;save();render();A.sIcon({id:MCB.sid})};
+A.sDel=d=>{const s=subj(d.id);confirmBox(`<b>${esc(s.name)}</b> irá a la papelera con todos sus temas. Se puede recuperar desde Copias → Papelera.`,'Mover a la papelera',()=>{snapshot('antes de borrar '+s.name);S.trash.unshift({type:'subj',item:s,d:Date.now()});S.subjects=S.subjects.filter(x=>x.id!==d.id);save(true);render()})};
+A.tRen=d=>{const{t}=getST(d.s,d.t);promptBox('Nombre del tema',t.title,v=>{if(v){t.title=v;save();render()}})};
+A.tDel=d=>{const{s,t}=getST(d.s,d.t);confirmBox(`El tema <b>${esc(t.title)}</b> irá a la papelera. Se puede recuperar desde Copias → Papelera.`,'Mover a la papelera',()=>{snapshot('antes de borrar '+t.title);S.trash.unshift({type:'tema',sid:s.id,sname:s.name,item:t,d:Date.now()});s.temas=s.temas.filter(x=>x.id!==d.t);save(true);render()})};
+A.tQs=d=>{const{t}=getST(d.s,d.t);MCB.st=d;modal(`<h2>Preguntas · ${esc(t.title)}</h2><p class="hint">Si alguna pregunta está mal o es confusa, bórrala con 🗑️.</p><div class="qlist">${t.questions.map(q=>{const x=st(q.id);return`<div class="q"><div><b>${esc(q.enunciado)}</b><br>✔ ${esc(q.opciones[q.correcta])} <span class="hint">· ${{mc:'elegir',vf:'V/F',hueco:'hueco'}[q.tipo]}${q.quick?' · rápida':''}${x?' · '+x.ok+'✅ '+x.fail+'❌':''}</span></div><button class="btn sm warn" data-act="qDel" data-q="${q.id}">🗑️</button></div>`}).join('')}</div>${(t.dev||[]).length?'<h3>✍️ Desarrollo</h3>'+t.dev.map(d=>`<div class="q"><div><b>${esc(d.enunciado)}</b><br><span class="hint">${d.puntos.length} ideas clave${S.devstats[d.id]?' · última nota '+fmtN(S.devstats[d.id].last):''}</span></div><button class="btn sm warn" data-act="devDel" data-q="${d.id}">🗑️</button></div>`).join(''):''}<button class="btn big" data-act="mclose" style="margin-top:12px">Cerrar</button>`)};
+A.devDel=d=>{const{t}=getST(MCB.st.s,MCB.st.t);t.dev=(t.dev||[]).filter(x=>x.id!==d.q);save();A.tQs(MCB.st)};
+A.qDel=d=>{const{t}=getST(MCB.st.s,MCB.st.t);t.questions=t.questions.filter(q=>q.id!==d.q);t.frags.forEach(f=>{if(f.qid===d.q)delete f.qid});save();A.tQs(MCB.st)};
+A.tRegen=d=>{if(!S.settings.apiKey.trim()){toast('Primero pon la clave de Gemini en Ajustes');return}const{s,t}=getST(d.s,d.t);
+ confirmBox(`Se volverán a crear la lectura fácil y las preguntas de <b>${esc(t.title)}</b> con la IA. El progreso de este tema se reinicia.`,'Rehacer',async()=>{
+  modal(`<h2>✨ Rehaciendo el tema</h2><ul class="prog" id="rg"></ul>`);const ul=$('#rg');const log=makeLog(ul);
+  try{await snapshot('antes de rehacer '+t.title);const nt=await buildTema({files:[],pasted:t.text,title:t.title,s,log});if(!nt.ai)throw new Error('La IA no respondió bien; no se ha cambiado nada.');Object.assign(t,{frags:nt.frags,glos:nt.glos,questions:nt.questions,dev:nt.dev,ai:true,readFrags:[],text:nt.text});save();closeModal();toast('✅ Tema rehecho');render()}
+  catch(e){ul.insertAdjacentHTML('beforeend',`<li class="err">❌ ${esc(e.message)}</li>`);ul.insertAdjacentHTML('afterend','<button class="btn big" data-act="mclose">Cerrar</button>')}})};
+function shareOrDownload(name,obj){const txt=JSON.stringify(obj);try{const f=new File([txt],name,{type:'application/json'});if(navigator.canShare&&navigator.canShare({files:[f]})){navigator.share({files:[f],title:name}).catch(()=>{});return}}catch(e){}
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},3000)}
+A.expAll=()=>{S.lastBackup=Date.now();save(true);shareOrDownload('LeoYAprendo-copia-'+(S.profile.name||'alumno').replace(/\W+/g,'')+'-'+dstr(Date.now())+'.json',Object.assign({kind:'backup'},S,{settings:Object.assign({},S.settings,{apiKey:''})}));if(view.name==='home')render()};
+A.expTemas=()=>shareOrDownload('LeoYAprendo-temas-'+dstr(Date.now())+'.json',{kind:'temas',subjects:S.subjects.map(s=>({...s,temas:s.temas.map(t=>({...t,readFrags:[]}))}))});
+A.impFile=async(d,el)=>{const f=el.files[0];if(!f)return;let o;try{o=JSON.parse(await f.text())}catch(e){toast('El archivo no es válido');return}el.value='';
+ if(o.kind==='temas'){await snapshot('antes de añadir temas compartidos');let n=0;(o.subjects||[]).forEach(ns=>{let s=S.subjects.find(x=>norm(x.name)===norm(ns.name));if(!s){s={...ns,temas:[]};S.subjects.push(s)}(ns.temas||[]).forEach(t=>{if(!s.temas.some(x=>x.id===t.id)){s.temas.push(t);n++}})});save(true);toast(`📥 ${n} temas añadidos`);render()}
+ else if(o.subjects){confirmBox('Se sustituirá todo lo de este iPad por la copia. Antes se guarda la situación actual como versión, así que se puede deshacer. La clave de Gemini se mantiene.','Cargar copia',async()=>{await snapshot('antes de cargar una copia');const key=S.settings.apiKey;const ns=Object.assign(defState(),o);ns.settings=Object.assign(defState().settings,o.settings||{},{apiKey:key});delete ns.kind;S=ns;save(true);toast('✅ Copia cargada');go('home')})}
+ else toast('El archivo no es de Leo y Aprendo')};
+A.wipe=()=>confirmBox('Se borrará <b>todo</b>: asignaturas, temas, historial, progreso y ajustes. Se guardará antes una versión automática por si te arrepientes.','Borrar todo',async()=>{await snapshot('antes de borrar todo');S=defState();save(true);go('setup')});
+async function fillCopy(){const p=$('#persist');if(p){let t='';try{const ok=navigator.storage&&navigator.storage.persisted?await navigator.storage.persisted():false;const e=navigator.storage&&navigator.storage.estimate?await navigator.storage.estimate():null;
+  t=(ok?'✅ El navegador ha marcado los datos como <b>protegidos</b> (no los borra para liberar espacio).':'⚠️ El navegador no garantiza conservar los datos. Ábrela siempre desde el <b>icono de la pantalla de inicio</b> y guarda copia fuera del iPad.')+(e&&e.usage?' · Ocupa '+(e.usage/1048576).toFixed(1)+' MB.':'')}catch(x){t='No se puede comprobar en este navegador.'}p.innerHTML=t}
+ const el=$('#snaps');if(!el)return;const ks=(await DB.keys()).filter(x=>String(x).startsWith('snap_')).sort().reverse();const rows=[];for(const k of ks){const v=await DB.get(k);if(v)rows.push({k,v})}
+ el.innerHTML=rows.length?rows.map(r=>`<div class="trow"><div class="tt">${fdate(r.v.d)}<div class="hint" style="font-weight:400">${esc(r.v.reason)} · ${(r.v.state.subjects||[]).length} asignaturas · ${(r.v.state.history||[]).length} sesiones</div></div><button class="btn sm" data-act="snapRes" data-k="${r.k}">↩️ Volver a esta versión</button></div>`).join(''):'Aún no hay versiones guardadas.'}
+A.snapRes=async d=>{const v=await DB.get(d.k);if(!v)return;confirmBox(`Se volverá a la versión del <b>${fdate(v.d)}</b>. Antes se guardará la situación actual como otra versión, así que no se pierde nada.`,'Volver a esa versión',async()=>{await snapshot('antes de volver a una versión anterior');const key=S.settings.apiKey;S=Object.assign(defState(),v.state);S.settings=Object.assign(defState().settings,v.state.settings||{},{apiKey:key});save(true);toast('✅ Versión recuperada');go('home')})};
+A.trRes=d=>{const x=S.trash[+d.i];if(!x)return;if(x.type==='subj'){S.subjects.push(x.item)}else{let s=subj(x.sid)||S.subjects.find(y=>norm(y.name)===norm(x.sname));if(!s){s={id:x.sid,name:x.sname,emoji:'📘',color:COLORS[S.subjects.length%COLORS.length],temas:[]};S.subjects.push(s)}s.temas.push(x.item)}S.trash.splice(+d.i,1);save(true);toast('↩️ Recuperado');render()};
+A.trDel=d=>{const x=S.trash[+d.i];if(!x)return;confirmBox(`<b>${esc(x.type==='subj'?x.item.name:x.item.title)}</b> se eliminará para siempre (seguirá en las versiones automáticas unos días).`,'Eliminar',()=>{S.trash.splice(+d.i,1);save(true);render()})};
+A.hist=d=>{TTS.stop();go('hist',{sid:(d&&d.sid)||S.activeSubject})};
+A.histOpen=d=>go('histItem',{id:d.id});
+A.histRedo=d=>{const h=S.history.find(x=>x.id===d.id);const s=subj(h.sid);if(!s)return;S.activeSubject=s.id;const items=[];h.det.filter(x=>!x.dev&&!x.ok).forEach(x=>{s.temas.forEach(t=>{const q=t.questions.find(q=>q.enunciado===x.enunciado);if(q)items.push({temaId:t.id,qid:q.id})})});
+ if(!items.length){toast('Esas preguntas ya no existen en los temas actuales');return}startQuiz('fallos',null,shuffle(items))};
+A.setName=(d,el)=>{S.profile.name=el.value.trim()||S.profile.name;save()};
+
+document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el||el.disabled)return;const f=A[el.dataset.act];if(f){e.preventDefault();f(el.dataset,el,e)}});
+document.addEventListener('change',e=>{const el=e.target;
+ if(el.dataset.file){for(const f of el.files)PEND.push(f);el.value='';paintFiles();const t=$('#at-title');if(t&&!t.value&&PEND[0]&&/pdf/i.test(PEND[0].type))t.value=PEND[0].name.replace(/\.[^.]+$/,'').replace(/[_-]+/g,' ');return}
+ if(el.dataset.set){const k=el.dataset.set;let v=el.type==='checkbox'?el.checked:el.value;if(el.dataset.num)v=+v;if(k==='pin'&&v&&!/^\d{4}$/.test(v)){toast('El código tiene que ser de 4 números');el.value=S.settings.pin;return}
+  S.settings[k]=v;save();applyTheme();if(k==='voiceURI'){TTS.load();A.vtest()}return}
+ if(el.dataset.chg&&A[el.dataset.chg])A[el.dataset.chg](el.dataset,el)});
+document.addEventListener('input',e=>{const el=e.target;if(el.dataset.set==='fs'){$('#fsv').textContent=el.value;S.settings.fs=+el.value;applyTheme()}if(el.dataset.set==='rate'){$('#ratev').textContent=el.value}});
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&$('#modal #mp, #modal #ms-name')){e.preventDefault();A.mok()}});
+
+/* ================== arranque ================== */
+(async()=>{await DB.open();const saved=await DB.get('state');if(saved&&typeof saved==='object'){S=Object.assign(defState(),saved);S.settings=Object.assign(defState().settings,saved.settings||{});S.profile=Object.assign(defState().profile,saved.profile||{})}
+ try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+ TTS.load();go(S.setup?'home':'setup');if(S.setup&&S.lastSnap!==dstr(Date.now())){await snapshot('copia automática diaria');S.lastSnap=dstr(Date.now());save()}})();
+</script>
+<script>if('serviceWorker' in navigator&&location.protocol.startsWith('http')){navigator.serviceWorker.register('sw.js').catch(()=>{})}</script>
+</body>
+</html>
